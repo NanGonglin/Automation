@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -170,6 +171,38 @@ public class ShopWebKeyWord {
             if(windowTitle.equals(title)){
                 break;
             }
+        }
+    }
+
+    /**
+     * 跳转到第几个窗口
+     * @param n 要跳转的窗口
+     */
+    public void switchToNWindows(int n){
+        Set<String> handles=driver.getWindowHandles();
+        int count=1;
+        for(String handle:handles){
+            if(count==n){
+                driver.switchTo().window(handle);
+            }
+            count++;
+        }
+    }
+
+    /**
+     * 判断查询的结果是否与预期结果相符
+     * @param xpath
+     * @param content
+     */
+    public void assertText(String xpath,String content){
+        List<WebElement> elements = driver.findElements(By.xpath(xpath));
+        if(content.equals(elements)){
+            System.out.println(content);
+            System.out.println(elements.get(0));
+            System.out.println("查询结果正确");
+        }
+        else{
+            System.out.println("查询结果不正确");
         }
     }
 
