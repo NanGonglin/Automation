@@ -30,6 +30,6 @@ public class CheckOrder {
         web.click("//a[text()='查看全部订单']");
         web.input("//input[@id='search_key']", "202103122135142663");
         web.click("//input[@value='查询']");
-        web.assertText("//div/span[text()='订单编号：']/em", "202103122135142663");
+        web.assertText("//div/span[text()='订单编号：']/em", "202103122135142663","equals");
     }
 }

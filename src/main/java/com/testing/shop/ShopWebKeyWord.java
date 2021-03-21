@@ -191,19 +191,43 @@ public class ShopWebKeyWord {
 
     /**
      * 判断查询的结果是否与预期结果相符
-     * @param xpath
-     * @param content
+     * @param xpath 查找元素
+     * @param content 预期结果的值
+     * @param method 包含还是等于预期结果
      */
-    public void assertText(String xpath,String content){
+    public void assertText(String xpath,String content,String method){
         List<WebElement> elements = driver.findElements(By.xpath(xpath));
-        if(content.equals(elements)){
-            System.out.println(content);
-            System.out.println(elements.get(0));
-            System.out.println("查询结果正确");
+        switch (method){
+            case "contains":
+                if(elements.contains(content)){
+                    System.out.println(content);
+                    System.out.println(elements.get(0));
+                    System.out.println("查询结果正确");
+                }
+                else{
+                    System.out.println("查询结果不正确");
+                }
+                break;
+            case "equals":
+                if(elements.equals(content)){
+                    System.out.println(content);
+                    System.out.println(elements.get(0));
+                    System.out.println("查询结果正确");
+                }
+                else{
+                    System.out.println("查询结果不正确");
+                }
+                break;
         }
-        else{
-            System.out.println("查询结果不正确");
-        }
+    }
+
+    /**
+     * 鼠标悬浮到指定的位置
+     * @param xpath 指定的位置
+     */
+    public void suspend(String xpath){
+        Actions actions=new Actions(driver);
+        actions.moveToElement(driver.findElement(By.xpath(xpath)));
     }
 
     /**
