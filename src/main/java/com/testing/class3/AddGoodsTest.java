@@ -2,8 +2,16 @@ package com.testing.class3;
 
 import com.testing.common.AutoLogger;
 import com.testing.shop.ShopWebKeyWord;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.file.Files;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -13,7 +21,7 @@ import java.util.Random;
  * @Created by 小白sy
  */
 public class AddGoodsTest {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
         ShopWebKeyWord web=new ShopWebKeyWord();
         AutoLogger.log.trace("自动化测试开始了");
         //1.打开网页，管理员登录
@@ -29,12 +37,34 @@ public class AddGoodsTest {
         web.switchIframe("//iframe[@id='workspace']");
         web.click("//span[text()='添加商品']");
 
+
         //3.填写新增的商品信息
-        Random random=new Random();
-        String[] availStr=new String[]{"西北区","华北区","华南区","东北区"};
-        int number=random.nextInt(availStr.length-1);
-        System.out.println(availStr[number]);
-        web.input("//input[@name='goods_name']", "小米净水器"+availStr[number]);
+//        Random random=new Random();
+//        String[] availStr=new String[]{"西北区","华北区","华南区","东北区"};
+//        int number=random.nextInt(availStr.length-1);
+//        System.out.println(availStr[number]);
+//        web.input("//input[@name='goods_name']", "小米净水器"+availStr[number]);
+
+        //生成日期格式拼接商品名
+        Date now=new Date();
+        SimpleDateFormat goodsNum=new SimpleDateFormat("ddHHmm");
+        String format=goodsNum.format(now);
+        System.out.println(format);
+        String goodsName="净水器"+format;
+
+        //截图操作
+        //1.将driver转换为截图对象
+        TakesScreenshot screenshot=(TakesScreenshot) (web.getDriver());
+        //2.截取当前浏览器图片
+        File screenPic=screenshot.getScreenshotAs(OutputType.FILE);
+        //3.设置图片的保存位置
+        File savePic=new File("logs/Screenshot/"+format+".png");
+        //4.将图片存放到指定的位置
+        com.google.common.io.Files.copy(screenPic,savePic);
+
+        web.input("//input[@name='goods_name']",goodsName);
+
+
         web.input("//textarea[@name='goods_remark']", "小米净水器家用净水机H600G 双芯六级过滤 无罐直饮水 RO反渗透 双出水龙头 米家APP智能互联");
 
         //4.选择商品种类
@@ -87,7 +117,9 @@ public class AddGoodsTest {
 
         //8.提交商品
         web.switchUpIframe();
-        web.click("//a[text()='确认提交']");
+        web.click("//a[text()='确认交']");
+
+        web.assertMysqlData("select goods_id,shop_price,goods_name from tp_goods where goods_name='"+goodsName+"'", "goods_id");
 
         //9.关闭浏览器
 //        web.closeBrowser();
