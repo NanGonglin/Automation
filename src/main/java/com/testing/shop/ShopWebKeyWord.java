@@ -1,18 +1,23 @@
 package com.testing.shop;
 
+import com.google.common.io.Files;
 import com.testing.common.AutoLogger;
+import com.testing.web.MysqlUtils;
 import com.testing.web.RobotUtils;
 import com.testing.webDriver.GoogleDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -55,8 +60,13 @@ public class ShopWebKeyWord {
      * @param xpath 按钮的位置
      */
     public void click(String xpath){
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        driver.findElement(By.xpath(xpath)).click();
+        try {
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+            driver.findElement(By.xpath(xpath)).click();
+        } catch (Exception e) {
+            e.printStackTrace();
+            takeScreen("click");
+        }
     }
 
     /**
@@ -222,6 +232,35 @@ public class ShopWebKeyWord {
     }
 
     /**
+     * 输入sql语句进行查询，判断结果正确性
+     * @param sql
+     * @return
+     * @throws SQLException
+     */
+    public boolean assertMysqlData(String sql,String expect) throws SQLException {
+        //先通过数据库查询获取结果
+        MysqlUtils mysql=new MysqlUtils();
+        mysql.creatConnector();
+        List<Map<String, String>> results = mysql.queryResult(sql);
+        System.out.println("完整的查询结果是"+results);
+        //判断结果是否符合预期
+        String s = results.get(0).get(expect);
+        try {
+            if(s!=null&& !s.equals("")){
+                System.out.println("获取到"+expect+"的值是"+s);
+                return true;
+            }
+            else{
+                return  false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("查询获取数据失败");
+            return  false;
+        }
+    }
+
+    /**
      * 鼠标悬浮到指定的位置
      * @param xpath 指定的位置
      */
@@ -288,6 +327,35 @@ public class ShopWebKeyWord {
         driver.switchTo().defaultContent();
     }
 
+    /**
+     *进行截图操作，将浏览器截图保存到指定目录下，文件名为格式为指定的时间+报错方法
+     * @param method 图片的名字
+     * @throws IOException
+     */
+    public void takeScreen(String method) {
+        TakesScreenshot screenshot=(TakesScreenshot)driver;
+        File screenPic=screenshot.getScreenshotAs(OutputType.FILE);
+        File savePic=new File("logs/Screenshot/"+method+createTime("MMdd+HH-mm")+".png");
+        try {
+            Files.copy(screenPic, savePic);
+        } catch (IOException e) {
+            System.out.println("截图失败，请检查文件格式");
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 用于生成指定格式的日期字符串
+     * @param format 需要格式化的格式
+     * @return 返回格式化后的值
+     */
+    public String createTime(String format){
+        Date now=new Date();
+        SimpleDateFormat sdk=new SimpleDateFormat(format);
+        String result = sdk.format(now);
+        System.out.println(format);
+        return result;
+    }
     /**
      * 关闭浏览器
      */
