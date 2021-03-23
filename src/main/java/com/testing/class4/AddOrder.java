@@ -18,7 +18,11 @@ public class AddOrder {
         web.input("//input[@name='password']", "123456");
         web.input("//input[@name='vertify']", "111");
         web.click("//input[@name='submit']");
+        adminAddOrder(web);
 
+    }
+
+    public static void adminAddOrder(ShopWebKeyWord web) {
         //2.进入添加订单页面
         web.click("//h3[text()='订单']");
         web.click("//a[text()='添加订单']");
@@ -35,7 +39,6 @@ public class AddOrder {
         web.select("//select[@id='district']", "content", "海淀区");
         web.input("//input[@id='address']", "北京邮电大学");
         web.input("//input[@id='zipcode']", "100000");
-
 
 
         web.input("//input[@placeholder='发票抬头']", "海棠依旧测试的新增订单");

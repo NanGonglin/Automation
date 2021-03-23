@@ -39,7 +39,7 @@ public class MysqlUtils {
      * @return 返回数据类型是List<Map<String, String>>
      * @throws SQLException
      */
-    public List<Map<String, String>> queryResult(String sql) throws SQLException {
+    public List<Map<String, String>> queryResult(String sql) {
         try {
             //3、创建查询
             Statement roystatement = myconnector.createStatement();

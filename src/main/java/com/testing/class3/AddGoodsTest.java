@@ -26,12 +26,22 @@ public class AddGoodsTest {
         AutoLogger.log.trace("自动化测试开始了");
         //1.打开网页，管理员登录
         web.openChromeBrowser();
-        web.visitURL("http://www.testingedu.com.cn:8000/Admin/Admin/login");
-        web.input("//input[@name='username']", "admin");
-        web.input("//input[@name='password']", "123456");
-        web.input("//input[@name='vertify']", "111");
-        web.click("//input[@name='submit']");
+        visitAdmin(web);
+        adminLogin(web);
 
+        //2.新增商品
+        adminAddGoods(web);
+
+        //10.关闭浏览器
+        web.closeBrowser();
+
+    }
+
+    public static void visitAdmin(ShopWebKeyWord web) {
+        web.visitURL("http://www.testingedu.com.cn:8000/Admin/Admin/login");
+    }
+
+    public static void adminAddGoods(ShopWebKeyWord web)  {
         //2.点击商城，点击添加商品
         web.click("//a[text()='商城']");
         web.switchIframe("//iframe[@id='workspace']");
@@ -60,7 +70,12 @@ public class AddGoodsTest {
         //3.设置图片的保存位置
         File savePic=new File("logs/Screenshot/"+format+".png");
         //4.将图片存放到指定的位置
-        com.google.common.io.Files.copy(screenPic,savePic);
+        try {
+            com.google.common.io.Files.copy(screenPic,savePic);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("报错错误截图失败");
+        }
 
         web.input("//input[@name='goods_name']",goodsName);
 
@@ -115,14 +130,17 @@ public class AddGoodsTest {
         web.switchIframe("//iframe[@id='ueditor_0']");
         web.input("//html/body/p", "测试输入");
 
-        //8.提交商品
+        //9.提交商品
         web.switchUpIframe();
-        web.click("//a[text()='确认交']");
+        web.click("//a[text()='确认提交']");
 
         web.assertMysqlData("select goods_id,shop_price,goods_name from tp_goods where goods_name='"+goodsName+"'", "goods_id");
+    }
 
-        //9.关闭浏览器
-//        web.closeBrowser();
-
+    public static void adminLogin(ShopWebKeyWord web) {
+        web.input("//input[@name='username']", "admin");
+        web.input("//input[@name='password']", "123456");
+        web.input("//input[@name='vertify']", "111");
+        web.click("//input[@name='submit']");
     }
 }

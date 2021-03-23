@@ -20,6 +20,10 @@ public class SearchGoods {
         web.openChromeBrowser();
         web.visitURL("http://www.testingedu.com.cn:8000/");
 
+        searchGoods(web);
+    }
+
+    public static void searchGoods(ShopWebKeyWord web) {
         web.click("//a[text()='电器工具']");
         web.switchWindows("商品列表");
         web.click("//a/span[text()='生活电器']");

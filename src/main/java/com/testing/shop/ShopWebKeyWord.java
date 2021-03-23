@@ -29,6 +29,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class ShopWebKeyWord {
     public WebDriver driver=null;
+    public void setDriver(ShopWebKeyWord web){
+        driver=web.getDriver();
+    }
     /**
      * 打开谷歌浏览器
      */
@@ -206,12 +209,12 @@ public class ShopWebKeyWord {
      * @param method 包含还是等于预期结果
      */
     public void assertText(String xpath,String content,String method){
-        List<WebElement> elements = driver.findElements(By.xpath(xpath));
+        String text = driver.findElement(By.xpath(xpath)).getText();
         switch (method){
             case "contains":
-                if(elements.contains(content)){
+                if(text.contains(content)){
                     System.out.println(content);
-                    System.out.println(elements.get(0));
+                    System.out.println(text);
                     System.out.println("查询结果正确");
                 }
                 else{
@@ -219,9 +222,9 @@ public class ShopWebKeyWord {
                 }
                 break;
             case "equals":
-                if(elements.equals(content)){
+                if(text.equals(content)){
                     System.out.println(content);
-                    System.out.println(elements.get(0));
+                    System.out.println(text);
                     System.out.println("查询结果正确");
                 }
                 else{
@@ -237,7 +240,7 @@ public class ShopWebKeyWord {
      * @return
      * @throws SQLException
      */
-    public boolean assertMysqlData(String sql,String expect) throws SQLException {
+    public boolean assertMysqlData(String sql,String expect)  {
         //先通过数据库查询获取结果
         MysqlUtils mysql=new MysqlUtils();
         mysql.creatConnector();
