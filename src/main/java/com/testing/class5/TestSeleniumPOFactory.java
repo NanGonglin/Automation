@@ -1,4 +1,4 @@
-package com.testing.class05;
+package com.testing.class5;
 
 import com.testing.common.AutoLogger;
 import com.testing.pageAdmin.AddGoodsPage;

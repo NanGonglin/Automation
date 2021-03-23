@@ -1,8 +1,7 @@
-package com.testing.class05;
+package com.testing.class5;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Random;
 
 /**
  * @Classname RandomTest

@@ -1,11 +1,8 @@
-package com.testing.class05;
+package com.testing.class5;
 
 import com.testing.class3.AddGoodsTest;
 import com.testing.class3.ShopBuyKeyWord;
 import com.testing.shop.ShopWebKeyWord;
-
-import java.io.IOException;
-import java.sql.SQLException;
 
 /**
  * @Classname RunAll
