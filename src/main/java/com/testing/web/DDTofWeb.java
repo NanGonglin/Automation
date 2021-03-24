@@ -1,4 +1,4 @@
-package com.testing.class6;
+package com.testing.web;
 
 import com.google.common.io.Files;
 import com.testing.common.AutoLogger;
@@ -61,9 +61,11 @@ public class DDTofWeb {
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             AutoLogger.log.trace("*******浏览器启动了********");
             resultcase.writeCell(nowline, RESULTCOL, "PASS");
-            AutoLogger 
+            AutoLogger.log.info("正在启动浏览器");
         } catch (Exception e) {
             e.printStackTrace();
+            AutoLogger.log.error("执行打开浏览器失败");
+            AutoLogger.log.error(e,e.fillInStackTrace());
             resultcase.writeCell(nowline, RESULTCOL, "FAIL");
         }
     }

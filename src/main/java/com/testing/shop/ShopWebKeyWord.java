@@ -46,8 +46,14 @@ public class ShopWebKeyWord {
      * 网址栏输入要访问的网址
      * @param url 网址的值
      */
-    public void visitURL(String url){
-        driver.get(url);
+    public boolean visitURL(String url){
+        try {
+            driver.get(url);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     /**
@@ -62,13 +68,15 @@ public class ShopWebKeyWord {
      * 点击按钮
      * @param xpath 按钮的位置
      */
-    public void click(String xpath){
+    public boolean click(String xpath){
         try {
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             driver.findElement(By.xpath(xpath)).click();
+            return true;
         } catch (Exception e) {
             e.printStackTrace();
             takeScreen("click");
+            return false;
         }
     }
 
@@ -137,9 +145,9 @@ public class ShopWebKeyWord {
      * @param seconds
      * @throws InterruptedException
      */
-    public void halt(int seconds) {
+    public void halt(String seconds) {
         try {
-            Thread.sleep(seconds * 1000);
+            Thread.sleep(Integer.parseInt(seconds) * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
             System.out.println("等待失败");
@@ -151,10 +159,18 @@ public class ShopWebKeyWord {
      * @param xpath 输入的位置
      * @param content 输入的内容
      */
-    public void input(String xpath,String content){
-        WebElement input = driver.findElement(By.xpath(xpath));
-        input.clear();
-        input.sendKeys(content);
+    public boolean input(String xpath,String content){
+        try {
+            WebElement input = driver.findElement(By.xpath(xpath));
+            input.clear();
+            input.sendKeys(content);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("向"+xpath+"中输入内容的时候，失败。");
+            return false;
+        }
+
     }
     //清空之前的值
     public void clear(String xpath){
@@ -208,14 +224,22 @@ public class ShopWebKeyWord {
      * @param content 预期结果的值
      * @param method 包含还是等于预期结果
      */
-    public void assertText(String xpath,String content,String method){
-        String text = driver.findElement(By.xpath(xpath)).getText();
+    public boolean assertText(String xpath,String content,String method){
+        String text = "";
+        boolean result=false;
+        try {
+            text = driver.findElement(By.xpath(xpath)).getText();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
         switch (method){
             case "contains":
                 if(text.contains(content)){
                     System.out.println(content);
                     System.out.println(text);
                     System.out.println("查询结果正确");
+                    result=true;
                 }
                 else{
                     System.out.println("查询结果不正确");
@@ -226,12 +250,14 @@ public class ShopWebKeyWord {
                     System.out.println(content);
                     System.out.println(text);
                     System.out.println("查询结果正确");
+                    result=true;
                 }
                 else{
                     System.out.println("查询结果不正确");
                 }
                 break;
         }
+        return result;
     }
 
     /**
@@ -276,11 +302,13 @@ public class ShopWebKeyWord {
      * 切换iframe
      * @param xpath 要切换的iframe
      */
-    public void switchIframe(String xpath){
+    public boolean switchIframe(String xpath){
         try {
             driver.switchTo().frame(driver.findElement(By.xpath(xpath)));
+            return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
     }
     /**
@@ -356,7 +384,7 @@ public class ShopWebKeyWord {
         Date now=new Date();
         SimpleDateFormat sdk=new SimpleDateFormat(format);
         String result = sdk.format(now);
-        System.out.println(format);
+//        System.out.println(format);
         return result;
     }
     /**

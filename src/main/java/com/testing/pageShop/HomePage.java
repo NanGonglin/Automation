@@ -45,7 +45,7 @@ public class HomePage {
     public void joinCart() {
         searchInput.sendKeys("净水器");
         searchBtn.click();
-        kw.halt(2);
+        kw.halt("2");
         firstGood.click();
         addCartBtn.click();
     }

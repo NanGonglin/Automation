@@ -71,7 +71,7 @@ public class AddGoodsPage {
         GoodsName.sendKeys("净水器");
         Select cat1=new Select(goodsCat1);
         cat1.selectByValue("52");
-        kw.halt(1);
+        kw.halt("1");
 //		Select cat2=new Select(goodsCat2);
 //		cat2.selectByValue("54");
 //		kw.halt("1");

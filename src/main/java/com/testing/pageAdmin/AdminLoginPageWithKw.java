@@ -43,7 +43,7 @@ public class AdminLoginPageWithKw {
         password.sendKeys("123456");
         verifyCode.sendKeys("1");
         submitBtn.click();
-        kw.halt(2);
+        kw.halt("2");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {

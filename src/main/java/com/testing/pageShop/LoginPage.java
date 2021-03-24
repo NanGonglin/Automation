@@ -52,6 +52,6 @@ public class LoginPage {
         }
         verifyCode.sendKeys("1");
         submitBtn.click();
-        kw.halt(2);
+        kw.halt("2");
     }
 }

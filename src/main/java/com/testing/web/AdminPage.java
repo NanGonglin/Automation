@@ -64,11 +64,11 @@ public class AdminPage extends ShopWebKeyWord {
         web.input("//textarea[@name='goods_remark']", "小米净水器家用净水机H600G 双芯六级过滤 无罐直饮水 RO反渗透 双出水龙头 米家APP智能互联");
 
         //4.选择商品种类
-        web.halt(1);
+        web.halt("1");
         web.select("//select[@id='cat_id']","content","电器");
-        web.halt(1);
+        web.halt("1");
         web.select("//select[@id='cat_id_2']","content","生活电器");
-        web.halt(1);
+        web.halt("1");
         web.select("//select[@id='cat_id_3']","content","净水器");
 
         //5.填写价格
@@ -82,7 +82,7 @@ public class AdminPage extends ShopWebKeyWord {
 
         //6.3直接通过input元素输入内容即可
         web.input("//div[text()='点击选择文件']/following-sibling::div/input", "E:\\小米净水器主页图片.png");
-        web.halt(1);
+        web.halt("1");
         web.click("//div[text()='确定使用']");
 
         //切换iframe，回到workspace

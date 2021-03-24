@@ -54,7 +54,7 @@ public class ShopTest {
         String homepage=web.getDriver().getWindowHandle();
         System.out.println("首页的句柄是："+homepage);
 
-        web.halt(10);
+        web.halt("10");
         web.click("//a[text()='手机通讯' and @target]");
         //所有窗口是一个set集合
         Set<String> windowhandles=web.getDriver().getWindowHandles();
