@@ -1,0 +1,483 @@
+23:35:52  [DEBUG] : CookieSpec selected: default
+23:35:52  [DEBUG] : Auth cache not set in the context
+23:35:52  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:35:52  [DEBUG] : Connection leased: [id: 0][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:52  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:35:52  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:35:52  [DEBUG] : Connection established 192.168.0.105:65491<->47.105.110.138:8000
+23:35:52  [DEBUG] : Executing request POST /index.php?m=Home&c=User&a=do_login&t=0.8275829035046693 HTTP/1.1
+23:35:52  [DEBUG] : Target auth state: UNCHALLENGED
+23:35:52  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:35:52  [DEBUG] : http-outgoing-0 >> POST /index.php?m=Home&c=User&a=do_login&t=0.8275829035046693 HTTP/1.1
+23:35:52  [DEBUG] : http-outgoing-0 >> Content-Length: 58
+23:35:52  [DEBUG] : http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded
+23:35:52  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+23:35:52  [DEBUG] : http-outgoing-0 >> Host: www.testingedu.com.cn:8000
+23:35:52  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+23:35:52  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+23:35:52  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+23:35:52  [DEBUG] : http-outgoing-0 >> "POST /index.php?m=Home&c=User&a=do_login&t=0.8275829035046693 HTTP/1.1[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "Content-Length: 58[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+23:35:52  [DEBUG] : http-outgoing-0 >> "username=1766342177%40qq.com&password=123456&verify_code=1"
+23:35:53  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Server: nginx/1.14.1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Date: Fri, 26 Mar 2021 15:35:52 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Content-Type: text/html; charset=UTF-8[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "X-Powered-By: PHP/7.0.33[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Set-Cookie: PHPSESSID=mvbfq5td0toju7t9vuft6st7f4; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Cache-Control: no-store, no-cache, must-revalidate[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Set-Cookie: user_id=86; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Set-Cookie: is_distribut=1; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Set-Cookie: uname=%25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "Set-Cookie: cn=0; expires=Fri, 26-Mar-2021 14:35:52 GMT; Max-Age=0; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "374[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "{"status":1,"msg":"\u767b\u9646\u6210\u529f","result":{"user_id":86,"email":"1766342177@qq.com","password":"519475228fe35ad067744465c42a19b2","paypwd":null,"sex":2,"birthday":-28800,"user_money":"0.00","frozen_money":null,"distribut_money":null,"underling_number":0,"pay_points":100,"address_id":0,"reg_time":1615548850,"last_login":1615548850,"last_ip":"","qq":"","mobile":"","mobile_validated":0,"oauth":"","openid":null,"unionid":null,"head_pic":"\/public\/upload\/user\/86\/head_pic\/\/8a455d3269dadad2b0376607b5a6ccf8.png","province":0,"city":0,"district":0,"email_validated":1,"nickname":"\u6d77\u68e0\u4f9d\u65e7","level":1,"discount":"1.00","total_amount":null,"is_lock":0,"is_distribut":1,"first_leader":0,"second_leader":0,"third_leader":0,"token":"7f1b76d3853a72593d5993efdcc400d0","message_mask":63,"push_id":"0","distribut_level":0,"is_vip":0,"level_name":null},"url":""}[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 OK
+23:35:53  [DEBUG] : http-outgoing-0 << Server: nginx/1.14.1
+23:35:53  [DEBUG] : http-outgoing-0 << Date: Fri, 26 Mar 2021 15:35:52 GMT
+23:35:53  [DEBUG] : http-outgoing-0 << Content-Type: text/html; charset=UTF-8
+23:35:53  [DEBUG] : http-outgoing-0 << Transfer-Encoding: chunked
+23:35:53  [DEBUG] : http-outgoing-0 << Connection: keep-alive
+23:35:53  [DEBUG] : http-outgoing-0 << X-Powered-By: PHP/7.0.33
+23:35:53  [DEBUG] : http-outgoing-0 << Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/
+23:35:53  [DEBUG] : http-outgoing-0 << Set-Cookie: PHPSESSID=mvbfq5td0toju7t9vuft6st7f4; path=/
+23:35:53  [DEBUG] : http-outgoing-0 << Expires: Thu, 19 Nov 1981 08:52:00 GMT
+23:35:53  [DEBUG] : http-outgoing-0 << Cache-Control: no-store, no-cache, must-revalidate
+23:35:53  [DEBUG] : http-outgoing-0 << Pragma: no-cache
+23:35:53  [DEBUG] : http-outgoing-0 << Set-Cookie: user_id=86; path=/
+23:35:53  [DEBUG] : http-outgoing-0 << Set-Cookie: is_distribut=1; path=/
+23:35:53  [DEBUG] : http-outgoing-0 << Set-Cookie: uname=%25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7; path=/
+23:35:53  [DEBUG] : http-outgoing-0 << Set-Cookie: cn=0; expires=Fri, 26-Mar-2021 14:35:52 GMT; Max-Age=0; path=/
+23:35:53  [DEBUG] : Connection can be kept alive indefinitely
+23:35:53  [DEBUG] : Cookie accepted [is_mobile="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:Sat Mar 27 00:35:52 CST 2021]
+23:35:53  [DEBUG] : Cookie accepted [PHPSESSID="mvbfq5td0toju7t9vuft6st7f4", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Cookie accepted [user_id="86", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Cookie accepted [is_distribut="1", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Cookie accepted [uname="%25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Cookie accepted [cn="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:Fri Mar 26 22:35:52 CST 2021]
+23:35:53  [DEBUG] : http-outgoing-0 << "0[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+23:35:53  [DEBUG] : Connection [id: 0][route: {}->http://www.testingedu.com.cn:8000] can be kept alive indefinitely
+23:35:53  [DEBUG] : http-outgoing-0: set socket timeout to 0
+23:35:53  [DEBUG] : Connection released: [id: 0][route: {}->http://www.testingedu.com.cn:8000][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:53  [INFO ] : 登录的结果是{"status":1,"msg":"登陆成功","result":{"user_id":86,"email":"1766342177@qq.com","password":"519475228fe35ad067744465c42a19b2","paypwd":null,"sex":2,"birthday":-28800,"user_money":"0.00","frozen_money":null,"distribut_money":null,"underling_number":0,"pay_points":100,"address_id":0,"reg_time":1615548850,"last_login":1615548850,"last_ip":"","qq":"","mobile":"","mobile_validated":0,"oauth":"","openid":null,"unionid":null,"head_pic":"\/public\/upload\/user\/86\/head_pic\/\/8a455d3269dadad2b0376607b5a6ccf8.png","province":0,"city":0,"district":0,"email_validated":1,"nickname":"海棠依旧","level":1,"discount":"1.00","total_amount":null,"is_lock":0,"is_distribut":1,"first_leader":0,"second_leader":0,"third_leader":0,"token":"7f1b76d3853a72593d5993efdcc400d0","message_mask":63,"push_id":"0","distribut_level":0,"is_vip":0,"level_name":null},"url":""}
+23:35:53  [DEBUG] : CookieSpec selected: default
+23:35:53  [DEBUG] : Cookie [version: 0][name: PHPSESSID][value: mvbfq5td0toju7t9vuft6st7f4][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: is_distribut][value: 1][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: is_mobile][value: 0][domain: www.testingedu.com.cn][path: /][expiry: Sat Mar 27 00:35:52 CST 2021] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: uname][value: %25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: user_id][value: 86][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Auth cache not set in the context
+23:35:53  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:35:53  [DEBUG] : Connection leased: [id: 1][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:53  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:35:53  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:35:53  [DEBUG] : Connection established 192.168.0.105:65492<->47.105.110.138:8000
+23:35:53  [DEBUG] : Executing request GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1
+23:35:53  [DEBUG] : Target auth state: UNCHALLENGED
+23:35:53  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:35:53  [DEBUG] : http-outgoing-1 >> GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1
+23:35:53  [DEBUG] : http-outgoing-1 >> Host: www.testingedu.com.cn:8000
+23:35:53  [DEBUG] : http-outgoing-1 >> Connection: Keep-Alive
+23:35:53  [DEBUG] : http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+23:35:53  [DEBUG] : http-outgoing-1 >> Cookie: PHPSESSID=mvbfq5td0toju7t9vuft6st7f4; is_distribut=1; is_mobile=0; uname=%25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7; user_id=86
+23:35:53  [DEBUG] : http-outgoing-1 >> Accept-Encoding: gzip,deflate
+23:35:53  [DEBUG] : http-outgoing-1 >> "GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 >> "Cookie: PHPSESSID=mvbfq5td0toju7t9vuft6st7f4; is_distribut=1; is_mobile=0; uname=%25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7; user_id=86[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 >> "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Server: nginx/1.14.1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Date: Fri, 26 Mar 2021 15:35:52 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Content-Type: text/html; charset=utf-8[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "X-Powered-By: PHP/7.0.33[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Cache-Control: no-store, no-cache, must-revalidate[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Pragma: no-cache[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "Set-Cookie: cn=2; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "bb1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "    <!--[0xe7][0x8e][0xb0][0xe6][0x9c][0x89][0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x97][0xb6]-->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "    <div class="mn-c-m">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "        <div class="mn-c-box">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <div class="c-store">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <div class="c-store-tt">2021-03-25 20:29:25</div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <div class="c-sale-b" style="display:none">  <!-- [0xe4][0xb8][0xb4][0xe6][0x97][0xb6][0xe5][0xb1][0x8f][0xe8][0x94][0xbd] -->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <span class="i">[[0xe6][0xbb][0xa1][0xe5][0x87][0x8f]]</span>[0xe6][0xbb][0xa1]299[0xe5][0x85][0x83][0xe5][0x87][0x8f]50[0xe5][0x85][0x83][\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <div class="c-item clearfix">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <a href="javascript:void(0);" class="del js_delete"[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                           onclick="header_cart_del(974),ajax_side_cart_list();">[0xc3][0x97]</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-pic fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <img src="/public/upload/goods/thumb/294/goods_thumb_294_0_50_50.png" alt="" title="[0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8]231521">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        </a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <div class="goods-cont fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-name">[0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8]231521</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <p class="num fl"> * 1[0xe4][0xbb][0xb6]</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <p class="red fr">[0xef][0xbf][0xa5]15999.00</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <div class="c-store">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <div class="c-store-tt">2021-03-25 20:29:32</div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <div class="c-sale-b" style="display:none">  <!-- [0xe4][0xb8][0xb4][0xe6][0x97][0xb6][0xe5][0xb1][0x8f][0xe8][0x94][0xbd] -->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <span class="i">[[0xe6][0xbb][0xa1][0xe5][0x87][0x8f]]</span>[0xe6][0xbb][0xa1]299[0xe5][0x85][0x83][0xe5][0x87][0x8f]50[0xe5][0x85][0x83][\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <div class="c-item clearfix">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <a href="javascript:void(0);" class="del js_delete"[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                           onclick="header_cart_del(975),ajax_side_cart_list();">[0xc3][0x97]</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-pic fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <img src="/public/upload/goods/thumb/286/goods_thumb_286_0_50_50.png" alt="" title="[0xe5][0xb0][0x8f][0xe7][0xb1][0xb3][0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8][0xe8][0xa5][0xbf][0xe5][0x8c][0x97][0xe5][0x8c][0xba]">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        </a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <div class="goods-cont fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-name">[0xe5][0xb0][0x8f][0xe7][0xb1][0xb3][0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8][0xe8][0xa5][0xbf][0xe5][0x8c][0x97][0xe5][0x8c][0xba]</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <p class="num fl"> * 1[0xe4][0xbb][0xb6]</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                            <p class="red fr">[0xef][0xbf][0xa5]15999.00</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                        <div class="mn-c-total">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                <div class="c-t">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <p class="t-n fl"><span class="red" id="total_qty">2</span>[0xe4][0xbb][0xb6]</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                    <p class="t-p red fr"><em>[0xef][0xbf][0xa5]</em><span id="total_pay">31998</span></p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "                <a href="/index.php/Home/Cart/index.html" class="c-btn">[0xe5][0x8e][0xbb][0xe8][0xb4][0xad][0xe7][0x89][0xa9][0xe8][0xbd][0xa6][0xe7][0xbb][0x93][0xe7][0xae][0x97] &gt;&gt;</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "            </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "        </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "        <!--[0xe7][0x8e][0xb0][0xe6][0x9c][0x89][0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x97][0xb6]-->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "<script>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "    $(".cart_quantity").text('2'); // [0xe8][0xb4][0xad][0xe7][0x89][0xa9][0xe8][0xbd][0xa6][0xe7][0x9a][0x84][0xe6][0x80][0xbb][0xe6][0x95][0xb0][0xe9][0x87][0x8f][\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "</script>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "0[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-1 << HTTP/1.1 200 OK
+23:35:53  [DEBUG] : http-outgoing-1 << Server: nginx/1.14.1
+23:35:53  [DEBUG] : http-outgoing-1 << Date: Fri, 26 Mar 2021 15:35:52 GMT
+23:35:53  [DEBUG] : http-outgoing-1 << Content-Type: text/html; charset=utf-8
+23:35:53  [DEBUG] : http-outgoing-1 << Transfer-Encoding: chunked
+23:35:53  [DEBUG] : http-outgoing-1 << Connection: keep-alive
+23:35:53  [DEBUG] : http-outgoing-1 << X-Powered-By: PHP/7.0.33
+23:35:53  [DEBUG] : http-outgoing-1 << Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/
+23:35:53  [DEBUG] : http-outgoing-1 << Expires: Thu, 19 Nov 1981 08:52:00 GMT
+23:35:53  [DEBUG] : http-outgoing-1 << Cache-Control: no-store, no-cache, must-revalidate
+23:35:53  [DEBUG] : http-outgoing-1 << Pragma: no-cache
+23:35:53  [DEBUG] : http-outgoing-1 << Set-Cookie: cn=2; path=/
+23:35:53  [DEBUG] : Connection can be kept alive indefinitely
+23:35:53  [DEBUG] : Cookie accepted [is_mobile="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:Sat Mar 27 00:35:52 CST 2021]
+23:35:53  [DEBUG] : Cookie accepted [cn="2", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Connection [id: 1][route: {}->http://www.testingedu.com.cn:8000] can be kept alive indefinitely
+23:35:53  [DEBUG] : http-outgoing-1: set socket timeout to 0
+23:35:53  [DEBUG] : Connection released: [id: 1][route: {}->http://www.testingedu.com.cn:8000][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:53  [INFO ] : 使用cookie查看购物车的结果是    <!--现有商品时-->
+    <div class="mn-c-m">
+        <div class="mn-c-box">
+
+                            <div class="c-store">
+                    <div class="c-store-tt">2021-03-25 20:29:25</div>
+                    <div class="c-sale-b" style="display:none">  <!-- 临时屏蔽 -->
+                        <span class="i">[满减]</span>满299元减50元
+                    </div>
+                    <div class="c-item clearfix">
+                        <a href="javascript:void(0);" class="del js_delete"
+                           onclick="header_cart_del(974),ajax_side_cart_list();">×</a>
+                        <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-pic fl">
+                            <img src="/public/upload/goods/thumb/294/goods_thumb_294_0_50_50.png" alt="" title="净水器231521">
+                        </a>
+                        <div class="goods-cont fl">
+                            <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-name">净水器231521</a>
+                            <p class="num fl"> * 1件</p>
+                            <p class="red fr">￥15999.00</p>
+                        </div>
+                    </div>
+                </div>
+                            <div class="c-store">
+                    <div class="c-store-tt">2021-03-25 20:29:32</div>
+                    <div class="c-sale-b" style="display:none">  <!-- 临时屏蔽 -->
+                        <span class="i">[满减]</span>满299元减50元
+                    </div>
+                    <div class="c-item clearfix">
+                        <a href="javascript:void(0);" class="del js_delete"
+                           onclick="header_cart_del(975),ajax_side_cart_list();">×</a>
+                        <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-pic fl">
+                            <img src="/public/upload/goods/thumb/286/goods_thumb_286_0_50_50.png" alt="" title="小米净水器西北区">
+                        </a>
+                        <div class="goods-cont fl">
+                            <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-name">小米净水器西北区</a>
+                            <p class="num fl"> * 1件</p>
+                            <p class="red fr">￥15999.00</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="mn-c-total">
+                <div class="c-t">
+                    <p class="t-n fl"><span class="red" id="total_qty">2</span>件</p>
+                    <p class="t-p red fr"><em>￥</em><span id="total_pay">31998</span></p>
+                </div>
+                <a href="/index.php/Home/Cart/index.html" class="c-btn">去购物车结算 &gt;&gt;</a>
+            </div>
+        </div>
+        <!--现有商品时-->
+<script>
+    $(".cart_quantity").text('2'); // 购物车的总数量
+</script>
+23:35:53  [DEBUG] : CookieSpec selected: default
+23:35:53  [DEBUG] : Auth cache not set in the context
+23:35:53  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:35:53  [DEBUG] : Connection leased: [id: 2][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:53  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:35:53  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:35:53  [DEBUG] : Connection established 192.168.0.105:65493<->47.105.110.138:8000
+23:35:53  [DEBUG] : Executing request GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1
+23:35:53  [DEBUG] : Target auth state: UNCHALLENGED
+23:35:53  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:35:53  [DEBUG] : http-outgoing-2 >> GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1
+23:35:53  [DEBUG] : http-outgoing-2 >> Host: www.testingedu.com.cn:8000
+23:35:53  [DEBUG] : http-outgoing-2 >> Connection: Keep-Alive
+23:35:53  [DEBUG] : http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+23:35:53  [DEBUG] : http-outgoing-2 >> Accept-Encoding: gzip,deflate
+23:35:53  [DEBUG] : http-outgoing-2 >> "GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 >> "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "HTTP/1.1 200 OK[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Server: nginx/1.14.1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Date: Fri, 26 Mar 2021 15:35:52 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Content-Type: text/html; charset=utf-8[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Transfer-Encoding: chunked[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Connection: keep-alive[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "X-Powered-By: PHP/7.0.33[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Set-Cookie: PHPSESSID=cm9e7k2l9e4233hfcm8g2ucon2; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Cache-Control: no-store, no-cache, must-revalidate[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Pragma: no-cache[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "Set-Cookie: cn=0; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "105[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "    <!--[0xe4][0xb8][0xba][0xe7][0xa9][0xba][0xe6][0x97][0xb6]-s-->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "    <div class="empty-c">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "        <span class="ma"><i class="c-i oh"></i>[0xe4][0xba][0xb2][0xef][0xbc][0x8c][0xe8][0xb4][0xad][0xe7][0x89][0xa9][0xe8][0xbd][0xa6][0xe4][0xb8][0xad][0xe6][0xb2][0xa1][0xe6][0x9c][0x89][0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x93][0x9f]~</span>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "    <!--[0xe4][0xb8][0xba][0xe7][0xa9][0xba][0xe6][0x97][0xb6]-e-->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "    <script>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "    $(".cart_quantity").text('0'); // [0xe8][0xb4][0xad][0xe7][0x89][0xa9][0xe8][0xbd][0xa6][0xe7][0x9a][0x84][0xe6][0x80][0xbb][0xe6][0x95][0xb0][0xe9][0x87][0x8f][\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "</script>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "0[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-2 << HTTP/1.1 200 OK
+23:35:53  [DEBUG] : http-outgoing-2 << Server: nginx/1.14.1
+23:35:53  [DEBUG] : http-outgoing-2 << Date: Fri, 26 Mar 2021 15:35:52 GMT
+23:35:53  [DEBUG] : http-outgoing-2 << Content-Type: text/html; charset=utf-8
+23:35:53  [DEBUG] : http-outgoing-2 << Transfer-Encoding: chunked
+23:35:53  [DEBUG] : http-outgoing-2 << Connection: keep-alive
+23:35:53  [DEBUG] : http-outgoing-2 << X-Powered-By: PHP/7.0.33
+23:35:53  [DEBUG] : http-outgoing-2 << Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/
+23:35:53  [DEBUG] : http-outgoing-2 << Set-Cookie: PHPSESSID=cm9e7k2l9e4233hfcm8g2ucon2; path=/
+23:35:53  [DEBUG] : http-outgoing-2 << Expires: Thu, 19 Nov 1981 08:52:00 GMT
+23:35:53  [DEBUG] : http-outgoing-2 << Cache-Control: no-store, no-cache, must-revalidate
+23:35:53  [DEBUG] : http-outgoing-2 << Pragma: no-cache
+23:35:53  [DEBUG] : http-outgoing-2 << Set-Cookie: cn=0; path=/
+23:35:53  [DEBUG] : Connection can be kept alive indefinitely
+23:35:53  [DEBUG] : Cookie accepted [is_mobile="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:Sat Mar 27 00:35:52 CST 2021]
+23:35:53  [DEBUG] : Cookie accepted [PHPSESSID="cm9e7k2l9e4233hfcm8g2ucon2", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Cookie accepted [cn="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Connection [id: 2][route: {}->http://www.testingedu.com.cn:8000] can be kept alive indefinitely
+23:35:53  [DEBUG] : http-outgoing-2: set socket timeout to 0
+23:35:53  [DEBUG] : Connection released: [id: 2][route: {}->http://www.testingedu.com.cn:8000][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:53  [INFO ] : 不使用cookie查看购物车的结果是    <!--为空时-s-->
+    <div class="empty-c">
+        <span class="ma"><i class="c-i oh"></i>亲，购物车中没有商品哟~</span>
+    </div>
+    <!--为空时-e-->
+    <script>
+    $(".cart_quantity").text('0'); // 购物车的总数量
+</script>
+23:35:53  [DEBUG] : CookieSpec selected: default
+23:35:53  [DEBUG] : Cookie [version: 0][name: PHPSESSID][value: mvbfq5td0toju7t9vuft6st7f4][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: cn][value: 2][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: is_distribut][value: 1][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: is_mobile][value: 0][domain: www.testingedu.com.cn][path: /][expiry: Sat Mar 27 00:35:52 CST 2021] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: uname][value: %25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Cookie [version: 0][name: user_id][value: 86][domain: www.testingedu.com.cn][path: /][expiry: null] match [www.testingedu.com.cn:8000/index.php]
+23:35:53  [DEBUG] : Auth cache not set in the context
+23:35:53  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:35:53  [DEBUG] : Connection leased: [id: 3][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:53  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:35:53  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:35:53  [DEBUG] : Connection established 192.168.0.105:65494<->47.105.110.138:8000
+23:35:53  [DEBUG] : Executing request GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1
+23:35:53  [DEBUG] : Target auth state: UNCHALLENGED
+23:35:53  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:35:53  [DEBUG] : http-outgoing-3 >> GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1
+23:35:53  [DEBUG] : http-outgoing-3 >> Host: www.testingedu.com.cn:8000
+23:35:53  [DEBUG] : http-outgoing-3 >> Connection: Keep-Alive
+23:35:53  [DEBUG] : http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+23:35:53  [DEBUG] : http-outgoing-3 >> Cookie: PHPSESSID=mvbfq5td0toju7t9vuft6st7f4; cn=2; is_distribut=1; is_mobile=0; uname=%25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7; user_id=86
+23:35:53  [DEBUG] : http-outgoing-3 >> Accept-Encoding: gzip,deflate
+23:35:53  [DEBUG] : http-outgoing-3 >> "GET /index.php?m=Home&c=Cart&a=header_cart_list HTTP/1.1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 >> "Cookie: PHPSESSID=mvbfq5td0toju7t9vuft6st7f4; cn=2; is_distribut=1; is_mobile=0; uname=%25E6%25B5%25B7%25E6%25A3%25A0%25E4%25BE%259D%25E6%2597%25A7; user_id=86[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 >> "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "HTTP/1.1 200 OK[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Server: nginx/1.14.1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Date: Fri, 26 Mar 2021 15:35:52 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Content-Type: text/html; charset=utf-8[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Transfer-Encoding: chunked[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Connection: keep-alive[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "X-Powered-By: PHP/7.0.33[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Cache-Control: no-store, no-cache, must-revalidate[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Pragma: no-cache[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "Set-Cookie: cn=2; path=/[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "bb1[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "    <!--[0xe7][0x8e][0xb0][0xe6][0x9c][0x89][0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x97][0xb6]-->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "    <div class="mn-c-m">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "        <div class="mn-c-box">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <div class="c-store">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <div class="c-store-tt">2021-03-25 20:29:25</div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <div class="c-sale-b" style="display:none">  <!-- [0xe4][0xb8][0xb4][0xe6][0x97][0xb6][0xe5][0xb1][0x8f][0xe8][0x94][0xbd] -->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <span class="i">[[0xe6][0xbb][0xa1][0xe5][0x87][0x8f]]</span>[0xe6][0xbb][0xa1]299[0xe5][0x85][0x83][0xe5][0x87][0x8f]50[0xe5][0x85][0x83][\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <div class="c-item clearfix">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <a href="javascript:void(0);" class="del js_delete"[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                           onclick="header_cart_del(974),ajax_side_cart_list();">[0xc3][0x97]</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-pic fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <img src="/public/upload/goods/thumb/294/goods_thumb_294_0_50_50.png" alt="" title="[0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8]231521">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        </a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <div class="goods-cont fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-name">[0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8]231521</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <p class="num fl"> * 1[0xe4][0xbb][0xb6]</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <p class="red fr">[0xef][0xbf][0xa5]15999.00</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <div class="c-store">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <div class="c-store-tt">2021-03-25 20:29:32</div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <div class="c-sale-b" style="display:none">  <!-- [0xe4][0xb8][0xb4][0xe6][0x97][0xb6][0xe5][0xb1][0x8f][0xe8][0x94][0xbd] -->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <span class="i">[[0xe6][0xbb][0xa1][0xe5][0x87][0x8f]]</span>[0xe6][0xbb][0xa1]299[0xe5][0x85][0x83][0xe5][0x87][0x8f]50[0xe5][0x85][0x83][\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <div class="c-item clearfix">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <a href="javascript:void(0);" class="del js_delete"[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                           onclick="header_cart_del(975),ajax_side_cart_list();">[0xc3][0x97]</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-pic fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <img src="/public/upload/goods/thumb/286/goods_thumb_286_0_50_50.png" alt="" title="[0xe5][0xb0][0x8f][0xe7][0xb1][0xb3][0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8][0xe8][0xa5][0xbf][0xe5][0x8c][0x97][0xe5][0x8c][0xba]">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        </a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <div class="goods-cont fl">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-name">[0xe5][0xb0][0x8f][0xe7][0xb1][0xb3][0xe5][0x87][0x80][0xe6][0xb0][0xb4][0xe5][0x99][0xa8][0xe8][0xa5][0xbf][0xe5][0x8c][0x97][0xe5][0x8c][0xba]</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <p class="num fl"> * 1[0xe4][0xbb][0xb6]</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                            <p class="red fr">[0xef][0xbf][0xa5]15999.00</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                        <div class="mn-c-total">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                <div class="c-t">[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <p class="t-n fl"><span class="red" id="total_qty">2</span>[0xe4][0xbb][0xb6]</p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                    <p class="t-p red fr"><em>[0xef][0xbf][0xa5]</em><span id="total_pay">31998</span></p>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "                <a href="/index.php/Home/Cart/index.html" class="c-btn">[0xe5][0x8e][0xbb][0xe8][0xb4][0xad][0xe7][0x89][0xa9][0xe8][0xbd][0xa6][0xe7][0xbb][0x93][0xe7][0xae][0x97] &gt;&gt;</a>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "            </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "        </div>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "        <!--[0xe7][0x8e][0xb0][0xe6][0x9c][0x89][0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x97][0xb6]-->[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "<script>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "    $(".cart_quantity").text('2'); // [0xe8][0xb4][0xad][0xe7][0x89][0xa9][0xe8][0xbd][0xa6][0xe7][0x9a][0x84][0xe6][0x80][0xbb][0xe6][0x95][0xb0][0xe9][0x87][0x8f][\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "</script>[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "0[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << "[\r][\n]"
+23:35:53  [DEBUG] : http-outgoing-3 << HTTP/1.1 200 OK
+23:35:53  [DEBUG] : http-outgoing-3 << Server: nginx/1.14.1
+23:35:53  [DEBUG] : http-outgoing-3 << Date: Fri, 26 Mar 2021 15:35:52 GMT
+23:35:53  [DEBUG] : http-outgoing-3 << Content-Type: text/html; charset=utf-8
+23:35:53  [DEBUG] : http-outgoing-3 << Transfer-Encoding: chunked
+23:35:53  [DEBUG] : http-outgoing-3 << Connection: keep-alive
+23:35:53  [DEBUG] : http-outgoing-3 << X-Powered-By: PHP/7.0.33
+23:35:53  [DEBUG] : http-outgoing-3 << Set-Cookie: is_mobile=0; expires=Fri, 26-Mar-2021 16:35:52 GMT; Max-Age=3600; path=/
+23:35:53  [DEBUG] : http-outgoing-3 << Expires: Thu, 19 Nov 1981 08:52:00 GMT
+23:35:53  [DEBUG] : http-outgoing-3 << Cache-Control: no-store, no-cache, must-revalidate
+23:35:53  [DEBUG] : http-outgoing-3 << Pragma: no-cache
+23:35:53  [DEBUG] : http-outgoing-3 << Set-Cookie: cn=2; path=/
+23:35:53  [DEBUG] : Connection can be kept alive indefinitely
+23:35:53  [DEBUG] : Cookie accepted [is_mobile="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:Sat Mar 27 00:35:52 CST 2021]
+23:35:53  [DEBUG] : Cookie accepted [cn="2", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:35:53  [DEBUG] : Connection [id: 3][route: {}->http://www.testingedu.com.cn:8000] can be kept alive indefinitely
+23:35:53  [DEBUG] : http-outgoing-3: set socket timeout to 0
+23:35:53  [DEBUG] : Connection released: [id: 3][route: {}->http://www.testingedu.com.cn:8000][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:35:53  [INFO ] : 使用cookie查看购物车的结果是    <!--现有商品时-->
+    <div class="mn-c-m">
+        <div class="mn-c-box">
+
+                            <div class="c-store">
+                    <div class="c-store-tt">2021-03-25 20:29:25</div>
+                    <div class="c-sale-b" style="display:none">  <!-- 临时屏蔽 -->
+                        <span class="i">[满减]</span>满299元减50元
+                    </div>
+                    <div class="c-item clearfix">
+                        <a href="javascript:void(0);" class="del js_delete"
+                           onclick="header_cart_del(974),ajax_side_cart_list();">×</a>
+                        <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-pic fl">
+                            <img src="/public/upload/goods/thumb/294/goods_thumb_294_0_50_50.png" alt="" title="净水器231521">
+                        </a>
+                        <div class="goods-cont fl">
+                            <a href="/index.php/Home/Goods/goodsInfo/id/294.html" class="goods-name">净水器231521</a>
+                            <p class="num fl"> * 1件</p>
+                            <p class="red fr">￥15999.00</p>
+                        </div>
+                    </div>
+                </div>
+                            <div class="c-store">
+                    <div class="c-store-tt">2021-03-25 20:29:32</div>
+                    <div class="c-sale-b" style="display:none">  <!-- 临时屏蔽 -->
+                        <span class="i">[满减]</span>满299元减50元
+                    </div>
+                    <div class="c-item clearfix">
+                        <a href="javascript:void(0);" class="del js_delete"
+                           onclick="header_cart_del(975),ajax_side_cart_list();">×</a>
+                        <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-pic fl">
+                            <img src="/public/upload/goods/thumb/286/goods_thumb_286_0_50_50.png" alt="" title="小米净水器西北区">
+                        </a>
+                        <div class="goods-cont fl">
+                            <a href="/index.php/Home/Goods/goodsInfo/id/286.html" class="goods-name">小米净水器西北区</a>
+                            <p class="num fl"> * 1件</p>
+                            <p class="red fr">￥15999.00</p>
+                        </div>
+                    </div>
+                </div>
+                        <div class="mn-c-total">
+                <div class="c-t">
+                    <p class="t-n fl"><span class="red" id="total_qty">2</span>件</p>
+                    <p class="t-p red fr"><em>￥</em><span id="total_pay">31998</span></p>
+                </div>
+                <a href="/index.php/Home/Cart/index.html" class="c-btn">去购物车结算 &gt;&gt;</a>
+            </div>
+        </div>
+        <!--现有商品时-->
+<script>
+    $(".cart_quantity").text('2'); // 购物车的总数量
+</script>

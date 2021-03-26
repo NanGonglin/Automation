@@ -1,0 +1,10 @@
+18:41:59  [INFO ] : 返回结果是    <!--为空时-s-->
+    <div class="empty-c">
+        <span class="ma"><i class="c-i oh"></i>亲，购物车中没有商品哟~</span>
+    </div>
+    <!--为空时-e-->
+    <script>
+    $(".cart_quantity").text('0'); // 购物车的总数量
+</script>
+18:41:59  [INFO ] : 购物车的数量是0
+18:41:59  [INFO ] : pass

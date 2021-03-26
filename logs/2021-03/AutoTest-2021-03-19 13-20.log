@@ -1,6 +1,0 @@
-13:20:51  [TRACE] : 这是trace信息
-13:20:51  [DEBUG] : debug信息
-13:20:51  [INFO ] : 比debug高的info级别
-13:20:51  [WARN ] : 警告级别
-13:20:51  [ERROR] : 严重级别
-13:20:51  [FATAL] : 致命级别

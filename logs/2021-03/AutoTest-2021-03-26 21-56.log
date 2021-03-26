@@ -1,0 +1,49 @@
+21:56:13  [DEBUG] : CookieSpec selected: default
+21:56:13  [DEBUG] : Auth cache not set in the context
+21:56:13  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+21:56:13  [DEBUG] : Connection leased: [id: 0][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+21:56:13  [DEBUG] : Opening connection {}->http://localhost:8080
+21:56:13  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+21:56:13  [DEBUG] : Connection established 127.0.0.1:64426<->127.0.0.1:8080
+21:56:13  [DEBUG] : Executing request POST /zhihu/Login HTTP/1.1
+21:56:13  [DEBUG] : Target auth state: UNCHALLENGED
+21:56:13  [DEBUG] : Proxy auth state: UNCHALLENGED
+21:56:13  [DEBUG] : http-outgoing-0 >> POST /zhihu/Login HTTP/1.1
+21:56:13  [DEBUG] : http-outgoing-0 >> Content-Length: 28
+21:56:13  [DEBUG] : http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded
+21:56:13  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+21:56:13  [DEBUG] : http-outgoing-0 >> Host: localhost:8080
+21:56:13  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+21:56:13  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+21:56:13  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+21:56:13  [DEBUG] : http-outgoing-0 >> "POST /zhihu/Login HTTP/1.1[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "Content-Length: 28[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 >> "username=Roy&password=123456"
+21:56:13  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 << "Set-Cookie: JSESSIONID=F15551AE0FD2B70DD1A6C55A13A6BF66; Path=/zhihu; HttpOnly[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 << "Set-Cookie: JSESSIONID=F15551AE0FD2B70DD1A6C55A13A6BF66; Max-Age=30; Expires=Fri, 26-Mar-2021 13:56:43 GMT[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 << "Content-Type: text/plain;charset=utf-8[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 << "Content-Length: 45[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 << "Date: Fri, 26 Mar 2021 13:56:13 GMT[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+21:56:13  [DEBUG] : http-outgoing-0 << "{"status":0,"msg":"[0xe6][0x81][0xad][0xe5][0x96][0x9c][0xe6][0x82][0xa8][0xef][0xbc][0x8c][0xe7][0x99][0xbb][0xe5][0xbd][0x95][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+21:56:13  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 
+21:56:13  [DEBUG] : http-outgoing-0 << Set-Cookie: JSESSIONID=F15551AE0FD2B70DD1A6C55A13A6BF66; Path=/zhihu; HttpOnly
+21:56:13  [DEBUG] : http-outgoing-0 << Set-Cookie: JSESSIONID=F15551AE0FD2B70DD1A6C55A13A6BF66; Max-Age=30; Expires=Fri, 26-Mar-2021 13:56:43 GMT
+21:56:13  [DEBUG] : http-outgoing-0 << Content-Type: text/plain;charset=utf-8
+21:56:13  [DEBUG] : http-outgoing-0 << Content-Length: 45
+21:56:13  [DEBUG] : http-outgoing-0 << Date: Fri, 26 Mar 2021 13:56:13 GMT
+21:56:13  [DEBUG] : Connection can be kept alive indefinitely
+21:56:13  [DEBUG] : Cookie accepted [JSESSIONID="F15551AE0FD2B70DD1A6C55A13A6BF66", version:0, domain:localhost, path:/zhihu, expiry:null]
+21:56:13  [DEBUG] : Cookie accepted [JSESSIONID="F15551AE0FD2B70DD1A6C55A13A6BF66", version:0, domain:localhost, path:/zhihu, expiry:Fri Mar 26 21:56:43 CST 2021]
+21:56:13  [DEBUG] : Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+21:56:13  [DEBUG] : http-outgoing-0: set socket timeout to 0
+21:56:13  [DEBUG] : Connection released: [id: 0][route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+21:56:13  [INFO ] : 第一次登录的结果是{"status":0,"msg":"恭喜您，登录成功"}

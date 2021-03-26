@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="OFF">
 	<properties>
-		<property name="LOG_HOME">log</property>
+		<property name="LOG_HOME">logs</property>
 		<property name="FILE_NAME">AutoTest</property>
 	</properties>
 	<appenders>
@@ -25,7 +25,7 @@
 
 	<loggers>
 		<!-- 日志记录的等级 -->
-		<root level="debug">
+		<root level="trace">
 			<!-- 引入配置好的console和文件输出 -->
 			<appender-ref ref="Console" />
 			<appender-ref ref="MyFile"></appender-ref>

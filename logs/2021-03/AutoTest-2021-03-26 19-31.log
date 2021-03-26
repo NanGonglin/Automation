@@ -1,0 +1,14 @@
+19:31:02  [INFO ] : cookie的键是Set-Cookiecookie的值是is_mobile=0; expires=Fri, 26-Mar-2021 12:31:01 GMT; Max-Age=3600; path=/
+19:31:02  [INFO ] : cookie的键是Set-Cookiecookie的值是PHPSESSID=6t63val8t9qjdq7mj8pd1260c7; path=/
+19:31:02  [INFO ] : cookie的键是Set-Cookiecookie的值是cn=0; path=/
+19:31:02  [INFO ] : 返回结果是    <!--为空时-s-->
+    <div class="empty-c">
+        <span class="ma"><i class="c-i oh"></i>亲，购物车中没有商品哟~</span>
+    </div>
+    <!--为空时-e-->
+    <script>
+    $(".cart_quantity").text('0'); // 购物车的总数量
+</script>
+19:31:02  [INFO ] : 提取后的结果0
+19:31:02  [INFO ] : pass
+19:31:02  [INFO ] : 断言的结果是true
