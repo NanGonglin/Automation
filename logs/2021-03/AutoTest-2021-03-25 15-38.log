@@ -1,0 +1,5 @@
+15:38:59  [ERROR] : 执行打开浏览器失败
+15:38:59  [ERROR] : java.lang.NullPointerException
+java.lang.NullPointerException: null
+	at com.testing.web.DDTofWeb.openChromeBrowser(DDTofWeb.java:68) [classes/:?]
+	at com.testing.class6.DDTwithWriter.main(DDTwithWriter.java:38) [classes/:?]
