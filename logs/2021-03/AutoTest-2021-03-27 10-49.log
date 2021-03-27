@@ -1,0 +1,267 @@
+10:49:34  [DEBUG] : CookieSpec selected: default
+10:49:34  [DEBUG] : Auth cache not set in the context
+10:49:34  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:49:34  [DEBUG] : Connection leased: [id: 0][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : Opening connection {}->http://localhost:8080
+10:49:34  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+10:49:34  [DEBUG] : Connection established 127.0.0.1:54138<->127.0.0.1:8080
+10:49:34  [DEBUG] : Executing request POST /zhihu/Login HTTP/1.1
+10:49:34  [DEBUG] : Target auth state: UNCHALLENGED
+10:49:34  [DEBUG] : Proxy auth state: UNCHALLENGED
+10:49:34  [DEBUG] : http-outgoing-0 >> POST /zhihu/Login HTTP/1.1
+10:49:34  [DEBUG] : http-outgoing-0 >> Content-Length: 28
+10:49:34  [DEBUG] : http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded
+10:49:34  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+10:49:34  [DEBUG] : http-outgoing-0 >> Host: localhost:8080
+10:49:34  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+10:49:34  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+10:49:34  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+10:49:34  [DEBUG] : http-outgoing-0 >> "POST /zhihu/Login HTTP/1.1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Content-Length: 28[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "username=Roy&password=123456"
+10:49:34  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Set-Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1; Path=/zhihu; HttpOnly[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Set-Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1; Max-Age=30; Expires=Sat, 27-Mar-2021 02:50:04 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Content-Type: text/plain;charset=utf-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Content-Length: 45[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Date: Sat, 27 Mar 2021 02:49:34 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "{"status":0,"msg":"[0xe6][0x81][0xad][0xe5][0x96][0x9c][0xe6][0x82][0xa8][0xef][0xbc][0x8c][0xe7][0x99][0xbb][0xe5][0xbd][0x95][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+10:49:34  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 
+10:49:34  [DEBUG] : http-outgoing-0 << Set-Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1; Path=/zhihu; HttpOnly
+10:49:34  [DEBUG] : http-outgoing-0 << Set-Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1; Max-Age=30; Expires=Sat, 27-Mar-2021 02:50:04 GMT
+10:49:34  [DEBUG] : http-outgoing-0 << Content-Type: text/plain;charset=utf-8
+10:49:34  [DEBUG] : http-outgoing-0 << Content-Length: 45
+10:49:34  [DEBUG] : http-outgoing-0 << Date: Sat, 27 Mar 2021 02:49:34 GMT
+10:49:34  [DEBUG] : Connection can be kept alive indefinitely
+10:49:34  [DEBUG] : Cookie accepted [JSESSIONID="70DFC03C06B61AB604C1238F8C8705B1", version:0, domain:localhost, path:/zhihu, expiry:null]
+10:49:34  [DEBUG] : Cookie accepted [JSESSIONID="70DFC03C06B61AB604C1238F8C8705B1", version:0, domain:localhost, path:/zhihu, expiry:Sat Mar 27 10:50:04 CST 2021]
+10:49:34  [DEBUG] : Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+10:49:34  [DEBUG] : http-outgoing-0: set socket timeout to 0
+10:49:34  [DEBUG] : Connection released: [id: 0][route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : CookieSpec selected: default
+10:49:34  [DEBUG] : Cookie [version: 0][name: JSESSIONID][value: 70DFC03C06B61AB604C1238F8C8705B1][domain: localhost][path: /zhihu][expiry: Sat Mar 27 10:50:04 CST 2021] match [localhost:8080/zhihu/Logout]
+10:49:34  [DEBUG] : Auth cache not set in the context
+10:49:34  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : Connection leased: [id: 0][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : http-outgoing-0: set socket timeout to 0
+10:49:34  [DEBUG] : Executing request POST /zhihu/Logout HTTP/1.1
+10:49:34  [DEBUG] : Target auth state: UNCHALLENGED
+10:49:34  [DEBUG] : Proxy auth state: UNCHALLENGED
+10:49:34  [DEBUG] : http-outgoing-0 >> POST /zhihu/Logout HTTP/1.1
+10:49:34  [DEBUG] : http-outgoing-0 >> Content-Length: 0
+10:49:34  [DEBUG] : http-outgoing-0 >> Host: localhost:8080
+10:49:34  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+10:49:34  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+10:49:34  [DEBUG] : http-outgoing-0 >> Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1
+10:49:34  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+10:49:34  [DEBUG] : http-outgoing-0 >> "POST /zhihu/Logout HTTP/1.1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Content-Length: 0[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Content-Type: text/plain;charset=utf-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Content-Length: 39[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Date: Sat, 27 Mar 2021 02:49:34 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "{"status":2,"msg":"[0xe6][0xb3][0xa8][0xe9][0x94][0x80]Roy[0xe6][0x88][0x90][0xe5][0x8a][0x9f][0xe3][0x80][0x82]"}"
+10:49:34  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 
+10:49:34  [DEBUG] : http-outgoing-0 << Content-Type: text/plain;charset=utf-8
+10:49:34  [DEBUG] : http-outgoing-0 << Content-Length: 39
+10:49:34  [DEBUG] : http-outgoing-0 << Date: Sat, 27 Mar 2021 02:49:34 GMT
+10:49:34  [DEBUG] : Connection can be kept alive indefinitely
+10:49:34  [DEBUG] : Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+10:49:34  [DEBUG] : http-outgoing-0: set socket timeout to 0
+10:49:34  [DEBUG] : Connection released: [id: 0][route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [INFO ] : 默认注销的结果是{"status":2,"msg":"注销Roy成功。"}
+10:49:34  [DEBUG] : CookieSpec selected: default
+10:49:34  [DEBUG] : Cookie [version: 0][name: JSESSIONID][value: 70DFC03C06B61AB604C1238F8C8705B1][domain: localhost][path: /zhihu][expiry: Sat Mar 27 10:50:04 CST 2021] match [localhost:8080/zhihu/Login]
+10:49:34  [DEBUG] : Auth cache not set in the context
+10:49:34  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : Connection leased: [id: 0][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : http-outgoing-0: set socket timeout to 0
+10:49:34  [DEBUG] : Executing request POST /zhihu/Login HTTP/1.1
+10:49:34  [DEBUG] : Target auth state: UNCHALLENGED
+10:49:34  [DEBUG] : Proxy auth state: UNCHALLENGED
+10:49:34  [DEBUG] : http-outgoing-0 >> POST /zhihu/Login HTTP/1.1
+10:49:34  [DEBUG] : http-outgoing-0 >> Content-Length: 28
+10:49:34  [DEBUG] : http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded
+10:49:34  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+10:49:34  [DEBUG] : http-outgoing-0 >> Host: localhost:8080
+10:49:34  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+10:49:34  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+10:49:34  [DEBUG] : http-outgoing-0 >> Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1
+10:49:34  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+10:49:34  [DEBUG] : http-outgoing-0 >> "POST /zhihu/Login HTTP/1.1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Content-Length: 28[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Cookie: JSESSIONID=70DFC03C06B61AB604C1238F8C8705B1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 >> "username=Roy&password=123456"
+10:49:34  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Set-Cookie: JSESSIONID=E4DB0AC8FB21DAE3AD36F77F603E111D; Path=/zhihu; HttpOnly[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Set-Cookie: JSESSIONID=E4DB0AC8FB21DAE3AD36F77F603E111D; Max-Age=30; Expires=Sat, 27-Mar-2021 02:50:04 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Content-Type: text/plain;charset=utf-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Content-Length: 45[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "Date: Sat, 27 Mar 2021 02:49:34 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-0 << "{"status":0,"msg":"[0xe6][0x81][0xad][0xe5][0x96][0x9c][0xe6][0x82][0xa8][0xef][0xbc][0x8c][0xe7][0x99][0xbb][0xe5][0xbd][0x95][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+10:49:34  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 
+10:49:34  [DEBUG] : http-outgoing-0 << Set-Cookie: JSESSIONID=E4DB0AC8FB21DAE3AD36F77F603E111D; Path=/zhihu; HttpOnly
+10:49:34  [DEBUG] : http-outgoing-0 << Set-Cookie: JSESSIONID=E4DB0AC8FB21DAE3AD36F77F603E111D; Max-Age=30; Expires=Sat, 27-Mar-2021 02:50:04 GMT
+10:49:34  [DEBUG] : http-outgoing-0 << Content-Type: text/plain;charset=utf-8
+10:49:34  [DEBUG] : http-outgoing-0 << Content-Length: 45
+10:49:34  [DEBUG] : http-outgoing-0 << Date: Sat, 27 Mar 2021 02:49:34 GMT
+10:49:34  [DEBUG] : Connection can be kept alive indefinitely
+10:49:34  [DEBUG] : Cookie accepted [JSESSIONID="E4DB0AC8FB21DAE3AD36F77F603E111D", version:0, domain:localhost, path:/zhihu, expiry:null]
+10:49:34  [DEBUG] : Cookie accepted [JSESSIONID="E4DB0AC8FB21DAE3AD36F77F603E111D", version:0, domain:localhost, path:/zhihu, expiry:Sat Mar 27 10:50:04 CST 2021]
+10:49:34  [DEBUG] : Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+10:49:34  [DEBUG] : http-outgoing-0: set socket timeout to 0
+10:49:34  [DEBUG] : Connection released: [id: 0][route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : CookieSpec selected: default
+10:49:34  [DEBUG] : Auth cache not set in the context
+10:49:34  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:49:34  [DEBUG] : Connection leased: [id: 1][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : Opening connection {}->http://localhost:8080
+10:49:34  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+10:49:34  [DEBUG] : Connection established 127.0.0.1:54141<->127.0.0.1:8080
+10:49:34  [DEBUG] : Executing request POST /zhihu/Logout HTTP/1.1
+10:49:34  [DEBUG] : Target auth state: UNCHALLENGED
+10:49:34  [DEBUG] : Proxy auth state: UNCHALLENGED
+10:49:34  [DEBUG] : http-outgoing-1 >> POST /zhihu/Logout HTTP/1.1
+10:49:34  [DEBUG] : http-outgoing-1 >> Content-Length: 0
+10:49:34  [DEBUG] : http-outgoing-1 >> Host: localhost:8080
+10:49:34  [DEBUG] : http-outgoing-1 >> Connection: Keep-Alive
+10:49:34  [DEBUG] : http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+10:49:34  [DEBUG] : http-outgoing-1 >> Accept-Encoding: gzip,deflate
+10:49:34  [DEBUG] : http-outgoing-1 >> "POST /zhihu/Logout HTTP/1.1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Content-Length: 0[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Host: localhost:8080[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "HTTP/1.1 200 [\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Set-Cookie: JSESSIONID=C57B70AA1D7EF416D27EBB339EC3DBCC; Path=/zhihu; HttpOnly[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Content-Type: text/plain;charset=utf-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Content-Length: 48[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Date: Sat, 27 Mar 2021 02:49:34 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "{"status":2,"msg":"[0xe6][0x9c][0xaa][0xe7][0x99][0xbb][0xe5][0xbd][0x95][0xef][0xbc][0x8c][0xe4][0xb8][0x8d][0xe8][0x83][0xbd][0xe6][0xb3][0xa8][0xe9][0x94][0x80][0xe3][0x80][0x82]"}"
+10:49:34  [DEBUG] : http-outgoing-1 << HTTP/1.1 200 
+10:49:34  [DEBUG] : http-outgoing-1 << Set-Cookie: JSESSIONID=C57B70AA1D7EF416D27EBB339EC3DBCC; Path=/zhihu; HttpOnly
+10:49:34  [DEBUG] : http-outgoing-1 << Content-Type: text/plain;charset=utf-8
+10:49:34  [DEBUG] : http-outgoing-1 << Content-Length: 48
+10:49:34  [DEBUG] : http-outgoing-1 << Date: Sat, 27 Mar 2021 02:49:34 GMT
+10:49:34  [DEBUG] : Connection can be kept alive indefinitely
+10:49:34  [DEBUG] : Cookie accepted [JSESSIONID="C57B70AA1D7EF416D27EBB339EC3DBCC", version:0, domain:localhost, path:/zhihu, expiry:null]
+10:49:34  [DEBUG] : Connection [id: 1][route: {}->http://localhost:8080] can be kept alive indefinitely
+10:49:34  [DEBUG] : http-outgoing-1: set socket timeout to 0
+10:49:34  [DEBUG] : Connection released: [id: 1][route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [INFO ] : 不带cookie注销的结果是{"status":2,"msg":"未登录，不能注销。"}
+10:49:34  [DEBUG] : CookieSpec selected: default
+10:49:34  [DEBUG] : Cookie [version: 0][name: JSESSIONID][value: C57B70AA1D7EF416D27EBB339EC3DBCC][domain: localhost][path: /zhihu][expiry: null] match [localhost:8080/zhihu/Login]
+10:49:34  [DEBUG] : Auth cache not set in the context
+10:49:34  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : Connection leased: [id: 1][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : http-outgoing-1: set socket timeout to 0
+10:49:34  [DEBUG] : Executing request POST /zhihu/Login HTTP/1.1
+10:49:34  [DEBUG] : Target auth state: UNCHALLENGED
+10:49:34  [DEBUG] : Proxy auth state: UNCHALLENGED
+10:49:34  [DEBUG] : http-outgoing-1 >> POST /zhihu/Login HTTP/1.1
+10:49:34  [DEBUG] : http-outgoing-1 >> Content-Length: 28
+10:49:34  [DEBUG] : http-outgoing-1 >> Content-Type: application/x-www-form-urlencoded
+10:49:34  [DEBUG] : http-outgoing-1 >> Content-Encoding: UTF-8
+10:49:34  [DEBUG] : http-outgoing-1 >> Host: localhost:8080
+10:49:34  [DEBUG] : http-outgoing-1 >> Connection: Keep-Alive
+10:49:34  [DEBUG] : http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+10:49:34  [DEBUG] : http-outgoing-1 >> Cookie: JSESSIONID=C57B70AA1D7EF416D27EBB339EC3DBCC
+10:49:34  [DEBUG] : http-outgoing-1 >> Accept-Encoding: gzip,deflate
+10:49:34  [DEBUG] : http-outgoing-1 >> "POST /zhihu/Login HTTP/1.1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Content-Length: 28[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Content-Encoding: UTF-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Host: localhost:8080[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Cookie: JSESSIONID=C57B70AA1D7EF416D27EBB339EC3DBCC[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 >> "username=Roy&password=123456"
+10:49:34  [DEBUG] : http-outgoing-1 << "HTTP/1.1 200 [\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Set-Cookie: JSESSIONID=3412FDE78397A92BD7BDB7F876A005B0; Path=/zhihu; HttpOnly[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Set-Cookie: JSESSIONID=3412FDE78397A92BD7BDB7F876A005B0; Max-Age=30; Expires=Sat, 27-Mar-2021 02:50:04 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Content-Type: text/plain;charset=utf-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Content-Length: 45[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "Date: Sat, 27 Mar 2021 02:49:34 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-1 << "{"status":0,"msg":"[0xe6][0x81][0xad][0xe5][0x96][0x9c][0xe6][0x82][0xa8][0xef][0xbc][0x8c][0xe7][0x99][0xbb][0xe5][0xbd][0x95][0xe6][0x88][0x90][0xe5][0x8a][0x9f]"}"
+10:49:34  [DEBUG] : http-outgoing-1 << HTTP/1.1 200 
+10:49:34  [DEBUG] : http-outgoing-1 << Set-Cookie: JSESSIONID=3412FDE78397A92BD7BDB7F876A005B0; Path=/zhihu; HttpOnly
+10:49:34  [DEBUG] : http-outgoing-1 << Set-Cookie: JSESSIONID=3412FDE78397A92BD7BDB7F876A005B0; Max-Age=30; Expires=Sat, 27-Mar-2021 02:50:04 GMT
+10:49:34  [DEBUG] : http-outgoing-1 << Content-Type: text/plain;charset=utf-8
+10:49:34  [DEBUG] : http-outgoing-1 << Content-Length: 45
+10:49:34  [DEBUG] : http-outgoing-1 << Date: Sat, 27 Mar 2021 02:49:34 GMT
+10:49:34  [DEBUG] : Connection can be kept alive indefinitely
+10:49:34  [DEBUG] : Cookie accepted [JSESSIONID="3412FDE78397A92BD7BDB7F876A005B0", version:0, domain:localhost, path:/zhihu, expiry:null]
+10:49:34  [DEBUG] : Cookie accepted [JSESSIONID="3412FDE78397A92BD7BDB7F876A005B0", version:0, domain:localhost, path:/zhihu, expiry:Sat Mar 27 10:50:04 CST 2021]
+10:49:34  [DEBUG] : Connection [id: 1][route: {}->http://localhost:8080] can be kept alive indefinitely
+10:49:34  [DEBUG] : http-outgoing-1: set socket timeout to 0
+10:49:34  [DEBUG] : Connection released: [id: 1][route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : CookieSpec selected: default
+10:49:34  [DEBUG] : Cookie [version: 0][name: JSESSIONID][value: E4DB0AC8FB21DAE3AD36F77F603E111D][domain: localhost][path: /zhihu][expiry: Sat Mar 27 10:50:04 CST 2021] match [localhost:8080/zhihu/Logout]
+10:49:34  [DEBUG] : Auth cache not set in the context
+10:49:34  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:49:34  [DEBUG] : Connection leased: [id: 2][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [DEBUG] : Opening connection {}->http://localhost:8080
+10:49:34  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+10:49:34  [DEBUG] : Connection established 127.0.0.1:54143<->127.0.0.1:8080
+10:49:34  [DEBUG] : Executing request POST /zhihu/Logout HTTP/1.1
+10:49:34  [DEBUG] : Target auth state: UNCHALLENGED
+10:49:34  [DEBUG] : Proxy auth state: UNCHALLENGED
+10:49:34  [DEBUG] : http-outgoing-2 >> POST /zhihu/Logout HTTP/1.1
+10:49:34  [DEBUG] : http-outgoing-2 >> Content-Length: 0
+10:49:34  [DEBUG] : http-outgoing-2 >> Host: localhost:8080
+10:49:34  [DEBUG] : http-outgoing-2 >> Connection: Keep-Alive
+10:49:34  [DEBUG] : http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+10:49:34  [DEBUG] : http-outgoing-2 >> Cookie: JSESSIONID=E4DB0AC8FB21DAE3AD36F77F603E111D
+10:49:34  [DEBUG] : http-outgoing-2 >> Accept-Encoding: gzip,deflate
+10:49:34  [DEBUG] : http-outgoing-2 >> "POST /zhihu/Logout HTTP/1.1[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 >> "Content-Length: 0[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 >> "Host: localhost:8080[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 >> "Cookie: JSESSIONID=E4DB0AC8FB21DAE3AD36F77F603E111D[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 >> "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 << "HTTP/1.1 200 [\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 << "Content-Type: text/plain;charset=utf-8[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 << "Content-Length: 39[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 << "Date: Sat, 27 Mar 2021 02:49:34 GMT[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 << "[\r][\n]"
+10:49:34  [DEBUG] : http-outgoing-2 << "{"status":2,"msg":"[0xe6][0xb3][0xa8][0xe9][0x94][0x80]Roy[0xe6][0x88][0x90][0xe5][0x8a][0x9f][0xe3][0x80][0x82]"}"
+10:49:34  [DEBUG] : http-outgoing-2 << HTTP/1.1 200 
+10:49:34  [DEBUG] : http-outgoing-2 << Content-Type: text/plain;charset=utf-8
+10:49:34  [DEBUG] : http-outgoing-2 << Content-Length: 39
+10:49:34  [DEBUG] : http-outgoing-2 << Date: Sat, 27 Mar 2021 02:49:34 GMT
+10:49:34  [DEBUG] : Connection can be kept alive indefinitely
+10:49:34  [DEBUG] : Connection [id: 2][route: {}->http://localhost:8080] can be kept alive indefinitely
+10:49:34  [DEBUG] : http-outgoing-2: set socket timeout to 0
+10:49:34  [DEBUG] : Connection released: [id: 2][route: {}->http://localhost:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+10:49:34  [INFO ] : 带cookie注销的结果是{"status":2,"msg":"注销Roy成功。"}

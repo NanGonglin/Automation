@@ -1,0 +1,152 @@
+10:28:25  [DEBUG] : CookieSpec selected: default
+10:28:25  [DEBUG] : Auth cache not set in the context
+10:28:25  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:25  [DEBUG] : Connection leased: [id: 0][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:28:25  [DEBUG] : Opening connection {}->http://localhost:8080
+10:28:25  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+10:28:27  [DEBUG] : Connect to localhost/127.0.0.1:8080 timed out. Connection will be retried using another IP address
+10:28:27  [DEBUG] : Connecting to localhost/0:0:0:0:0:0:0:1:8080
+10:28:29  [DEBUG] : http-outgoing-0: Shutdown connection
+10:28:29  [DEBUG] : Connection discarded
+10:28:29  [DEBUG] : Connection released: [id: 0][route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:29  [ERROR] : org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:179) [classes/:?]
+	at com.testing.class13.ZhihuUserInfoTest.main(ZhihuUserInfoTest.java:24) [classes/:?]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_281]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[?:1.8.0_281]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[?:1.8.0_281]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[?:1.8.0_281]
+	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_281]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) ~[httpclient-4.5.12.jar:4.5.12]
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:173) ~[classes/:?]
+	... 1 more
+10:28:29  [INFO ] : 登录的结果是org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+10:28:29  [DEBUG] : CookieSpec selected: default
+10:28:29  [DEBUG] : Auth cache not set in the context
+10:28:29  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:29  [DEBUG] : Connection leased: [id: 1][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:28:29  [DEBUG] : Opening connection {}->http://localhost:8080
+10:28:29  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+10:28:31  [DEBUG] : Connect to localhost/127.0.0.1:8080 timed out. Connection will be retried using another IP address
+10:28:31  [DEBUG] : Connecting to localhost/0:0:0:0:0:0:0:1:8080
+10:28:33  [DEBUG] : http-outgoing-1: Shutdown connection
+10:28:33  [DEBUG] : Connection discarded
+10:28:33  [DEBUG] : Connection released: [id: 1][route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:33  [ERROR] : org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:179) [classes/:?]
+	at com.testing.class13.ZhihuUserInfoTest.main(ZhihuUserInfoTest.java:26) [classes/:?]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_281]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[?:1.8.0_281]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[?:1.8.0_281]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[?:1.8.0_281]
+	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_281]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) ~[httpclient-4.5.12.jar:4.5.12]
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:173) ~[classes/:?]
+	... 1 more
+10:28:33  [INFO ] : 默认带cookie查看个人信息的结果是org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+10:28:33  [DEBUG] : CookieSpec selected: default
+10:28:33  [DEBUG] : Auth cache not set in the context
+10:28:33  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:33  [DEBUG] : Connection leased: [id: 2][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:28:33  [DEBUG] : Opening connection {}->http://localhost:8080
+10:28:33  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+10:28:35  [DEBUG] : Connect to localhost/127.0.0.1:8080 timed out. Connection will be retried using another IP address
+10:28:35  [DEBUG] : Connecting to localhost/0:0:0:0:0:0:0:1:8080
+10:28:37  [DEBUG] : http-outgoing-2: Shutdown connection
+10:28:37  [DEBUG] : Connection discarded
+10:28:37  [DEBUG] : Connection released: [id: 2][route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:37  [ERROR] : org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:179) [classes/:?]
+	at com.testing.class13.ZhihuUserInfoTest.main(ZhihuUserInfoTest.java:30) [classes/:?]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_281]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[?:1.8.0_281]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[?:1.8.0_281]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[?:1.8.0_281]
+	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_281]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) ~[httpclient-4.5.12.jar:4.5.12]
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:173) ~[classes/:?]
+	... 1 more
+10:28:37  [INFO ] : 不带cookie查看个人信息的结果是org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+10:28:37  [DEBUG] : CookieSpec selected: default
+10:28:37  [DEBUG] : Auth cache not set in the context
+10:28:37  [DEBUG] : Connection request: [route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:37  [DEBUG] : Connection leased: [id: 3][route: {}->http://localhost:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+10:28:37  [DEBUG] : Opening connection {}->http://localhost:8080
+10:28:37  [DEBUG] : Connecting to localhost/127.0.0.1:8080
+10:28:39  [DEBUG] : Connect to localhost/127.0.0.1:8080 timed out. Connection will be retried using another IP address
+10:28:39  [DEBUG] : Connecting to localhost/0:0:0:0:0:0:0:1:8080
+10:28:41  [DEBUG] : http-outgoing-3: Shutdown connection
+10:28:41  [DEBUG] : Connection discarded
+10:28:41  [DEBUG] : Connection released: [id: 3][route: {}->http://localhost:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+10:28:41  [ERROR] : org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:179) [classes/:?]
+	at com.testing.class13.ZhihuUserInfoTest.main(ZhihuUserInfoTest.java:34) [classes/:?]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_281]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[?:1.8.0_281]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[?:1.8.0_281]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[?:1.8.0_281]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[?:1.8.0_281]
+	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_281]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.12.jar:4.5.12]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) ~[httpclient-4.5.12.jar:4.5.12]
+	at com.testing.inter.HttpClientUtils.doPost(HttpClientUtils.java:173) ~[classes/:?]
+	... 1 more
+10:28:41  [INFO ] : 带cookie查看个人信息的结果是org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect

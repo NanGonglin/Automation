@@ -17,19 +17,28 @@ import org.apache.http.util.EntityUtils;
  */
 public class ZhihuLogoutTest {
     public static void main(String[] args) throws Exception {
-        HttpClientUtils sy=new HttpClientUtils();
-        String loginresult = sy.doPost("http://localhost:8080/zhihu/Login", "username=Roy&password=123456", "urlencoded");
-        String logoutresult = sy.doPost("http://localhost:8080/zhihu/Logout", "", "");
-        AutoLogger.log.info("默认注销的结果是"+logoutresult);
+        CloseableHttpClient sy=HttpClients.createDefault();
+        HttpPost loginpost=new HttpPost("http://localhost:8080/zhihu/Login");
+        StringEntity logintparam=new StringEntity("username=Roy&password=123456");
+        logintparam.setContentType("application/x-www-form-urlencoded");
+        logintparam.setContentEncoding("UTF-8");
+        loginpost.setEntity(logintparam);
+        CloseableHttpResponse response = sy.execute(loginpost);
+        String logintResult = EntityUtils.toString(response.getEntity(), "UTF-8");
+        AutoLogger.log.info("获取登录的结果是"+logintResult);
 
-        sy.notusecookie();
-        String loginresult2 = sy.doPost("http://localhost:8080/zhihu/Login", "username=Roy&password=123456", "urlencoded");
-        String logoutresult2 = sy.doPost("http://localhost:8080/zhihu/Logout", "", "");
-        AutoLogger.log.info("不带cookie注销的结果是"+logoutresult2);
+        //带cookie的注销操作
+//        HttpPost logoutpost=new HttpPost("http://localhost:8080/zhihu/Logout");
+//        CloseableHttpResponse logoutresponse = sy.execute(logoutpost);
+//        String logoutresult = EntityUtils.toString(logoutresponse.getEntity(), "UTF-8");
+//        AutoLogger.log.info("默认客户端注销的结果是"+logoutresult);
 
-        sy.usecookie();
-        String loginresult3 = sy.doPost("http://localhost:8080/zhihu/Login", "username=Roy&password=123456", "urlencoded");
-        String logoutresult3 = sy.doPost("http://localhost:8080/zhihu/Logout", "", "");
-        AutoLogger.log.info("带cookie注销的结果是"+logoutresult3);
+        //不带cookie,新客户端的注销操作
+        CloseableHttpClient client=HttpClients.custom().build();
+        HttpPost logoutpost2=new HttpPost("http://localhost:8080/zhihu/Logout");
+        CloseableHttpResponse logoutresponse2 = client.execute(logoutpost2);
+        String logoutresult2 = EntityUtils.toString(logoutresponse2.getEntity(), "UTF-8");
+        AutoLogger.log.info("默认客户端注销的结果是"+logoutresult2);
+
     }
 }

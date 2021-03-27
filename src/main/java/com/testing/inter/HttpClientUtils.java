@@ -34,7 +34,7 @@ public class HttpClientUtils {
     //成员变量cookiestore，用于存储cookie，并且方便进行client之间的传递
     BasicCookieStore cookieStore=new BasicCookieStore();
     //成员变量，用于决定是否使用cookiestore
-    boolean isUseCookie=true;
+    public boolean isUseCookie=true;
 
     /**
      * unicode转码
@@ -110,7 +110,6 @@ public class HttpClientUtils {
     }
     //get
     public String doGet(String uri){
-        //基于输入参数，决定是否调用cookie
         HttpGet get=null;
         get=new HttpGet(uri);
         try {
@@ -129,7 +128,7 @@ public class HttpClientUtils {
     //post
     //输入参数，来指定不同的contentType
     public String doPost(String uri,String param,String contentType){
-        creatClient();
+//        creatClient();
         HttpPost post=new HttpPost(uri);
         try {
             HttpEntity postparam=null;

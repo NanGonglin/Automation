@@ -29,7 +29,7 @@ public class IpGetTest {
 
         //拼接请求内容
         //四大要素：http请求方法、url、请求头、请求体
-        HttpGet ipget=new HttpGet("https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&sugsid=33256,33344,31660,33392,33695,33714,26350&wd=i&req=2&csor=1&cb=jQuery11020016567752707456584_1616729416184&_=1616729416185");
+        HttpGet ipget=new HttpGet("https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?query=3.3.3.3&co=&resource_id=5809&t=1612267942405&ie=utf8&oe=gbk&cb=op_aladdin_callback&format=json&tn=baidu&cb=jQuery110208873521310280592_1612267928253&_=1612267928259");
         try {
             CloseableHttpResponse ipresponse=sy.execute(ipget);
             //返回包输出
@@ -41,9 +41,10 @@ public class IpGetTest {
             System.out.println("返回体是"+ipentity);
 
             String ipresult = EntityUtils.toString(ipentity, "UTF-8");
-            System.out.println("返回结果是"+ipresult);
+
             //转换unicode编码
-//            ipresult=UnicodeDecode.unicodeDecode(ipresult);
+            ipresult=UnicodeDecode.unicodeDecode(ipresult);
+            System.out.println("转码后返回结果是"+ipresult);
 
 //            //断言，对返回体字符串进行处理
 //            if(ipresult.contains("美国")){
@@ -54,29 +55,28 @@ public class IpGetTest {
 //            //1.利用正则表达式取出json的内容,再用fastjson逐层解析获取g的值
             Pattern p=Pattern.compile("\\((.*?)\\)");
             Matcher m=p.matcher(ipresult);
-            System.out.println(m.find());
-            System.out.println(m.group(1));
+            m.find();
             String ipjson = m.group(1);
 
             //2.1获取结果信息中g键对应得值
             JSONObject jsonObject= JSON.parseObject(ipjson);
             //获取第一层，也就是result,是一个数组
-            JSONArray result = jsonObject.getJSONArray("g");
+            JSONArray result = jsonObject.getJSONArray("Result");
             //数组按下标获取元素
             JSONObject resultjson = result.getJSONObject(0);
-            String q = resultjson.get("q").toString();
-            System.out.println("fastjson逐层解析获取g下面第一个q的值是"+q);
+            String resultData = resultjson.getJSONObject("DisplayData").getJSONObject("resultData").getJSONObject("tplData").get("location").toString();
+            System.out.println("fastjson逐层解析获取location的值是"+resultData);
 
             //2.2正则表达式直接获取g键的值
-            Pattern gp=Pattern.compile(",\"q\":\"(.*?)\"\\},");
-            Matcher gm=gp.matcher(ipresult);
-            gm.find();
-            System.out.println("通过正则表达式直接获取g下面第一个q的值是"+gm.group(1));
+            Pattern locationp=Pattern.compile(",\"location\":\"(.*?)\",");
+            Matcher locationm=locationp.matcher(ipresult);
+            locationm.find();
+            System.out.println("通过正则表达式直接获取location的值是"+locationm.group(1));
 
 
             //3.jsonpath解析:也要基于字符串是个标准格式
-            String jsonpath = JSONPath.read(ipjson, "$.g[0].q").toString();
-            System.out.println("通过jsonpath获取g下面第一个q值是"+jsonpath);
+            String jsonpath = JSONPath.read(ipjson, "$.Result[0].DisplayData.resultData.tplData.location").toString();
+            System.out.println("通过jsonpath获取location的值是"+jsonpath);
 
         } catch (IOException e) {
             e.printStackTrace();

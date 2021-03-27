@@ -1,0 +1,4 @@
+22:14:50  [INFO ] : {"status":200,"msg":"success","token":"f672750f249e4644b683067309762147"}
+22:14:50  [INFO ] : 登陆的结果是{"status":200,"msg":"恭喜您，登录成功","userid":"1"}
+22:14:59  [INFO ] : {"status":200,"msg":"success","token":"254c3ddb4c704888bfa95895f4d32348"}
+22:14:59  [INFO ] : 登陆的结果是{"status":406,"msg":"用户已经在别处登录"}
