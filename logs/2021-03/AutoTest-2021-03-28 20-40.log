@@ -1,0 +1,3 @@
+20:40:13  [INFO ] : auth的返回结果是{"status":200,"msg":"success","token":"da78cfc2716041c88ff00e5c8e03d587"}
+20:40:13  [INFO ] : login接口返回结果是{"status":200,"msg":"恭喜您，登录成功","userid":"8340"}
+20:40:13  [INFO ] : logout的返回结果是{"status":200,"msg":"用户已退出登录"}

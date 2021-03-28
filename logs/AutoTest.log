@@ -1,8 +1,46 @@
-23:56:26  [INFO ] : 随机的用户名是yuan36
-23:56:26  [INFO ] : auth接口的返回是{"status":200,"msg":"success","token":"a8b5ffc7261d45edaea99b9e8d6000af"}
-23:56:26  [INFO ] : token的值是a8b5ffc7261d45edaea99b9e8d6000af
-23:56:27  [INFO ] : register接口的返回是{"status":200,"msg":"注册成功"}
-23:56:27  [INFO ] : login接口的返回是{"status":200,"msg":"恭喜您，登录成功","userid":"13401"}
-23:56:27  [INFO ] : userid的值是13401
-23:56:27  [INFO ] : getUserInfo接口返回的值是{"status":200,"msg":"查询成功","nickname":"yuan36在学习测试开发","id":"13401","describe":"我还在学习测试开发"}
-23:56:27  [INFO ] : logout接口的返回是{"status":200,"msg":"用户已退出登录"}
+23:59:54  [DEBUG] : CookieSpec selected: default
+23:59:54  [DEBUG] : Auth cache not set in the context
+23:59:54  [DEBUG] : Connection request: [route: {}->http://testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:59:54  [DEBUG] : Connection leased: [id: 1][route: {}->http://testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:59:54  [DEBUG] : Opening connection {}->http://testingedu.com.cn:8081
+23:59:54  [DEBUG] : Connecting to testingedu.com.cn/47.105.110.138:8081
+23:59:54  [DEBUG] : Connection established 192.168.0.105:55689<->47.105.110.138:8081
+23:59:54  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:59:54  [DEBUG] : Target auth state: UNCHALLENGED
+23:59:54  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:59:54  [DEBUG] : http-outgoing-1 >> POST /inter/HTTP/login HTTP/1.1
+23:59:54  [DEBUG] : http-outgoing-1 >> yuan: testToken
+23:59:54  [DEBUG] : http-outgoing-1 >> token: {tokenV}
+23:59:54  [DEBUG] : http-outgoing-1 >> Content-Length: 29
+23:59:54  [DEBUG] : http-outgoing-1 >> Content-Type: application/x-www-form-urlencoded
+23:59:54  [DEBUG] : http-outgoing-1 >> Content-Encoding: UTF-8
+23:59:54  [DEBUG] : http-outgoing-1 >> Host: testingedu.com.cn:8081
+23:59:54  [DEBUG] : http-outgoing-1 >> Connection: Keep-Alive
+23:59:54  [DEBUG] : http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+23:59:54  [DEBUG] : http-outgoing-1 >> Accept-Encoding: gzip,deflate
+23:59:54  [DEBUG] : http-outgoing-1 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "yuan: testToken[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "token: {tokenV}[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "Content-Length: 29[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "Content-Encoding: UTF-8[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "Host: testingedu.com.cn:8081[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 >> "username=yuan&password=123456"
+23:59:54  [DEBUG] : http-outgoing-1 << "HTTP/1.1 200 [\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 << "Content-Length: 35[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 << "Date: Sun, 28 Mar 2021 15:59:53 GMT[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+23:59:54  [DEBUG] : http-outgoing-1 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:59:54  [DEBUG] : http-outgoing-1 << HTTP/1.1 200 
+23:59:54  [DEBUG] : http-outgoing-1 << Content-Type: text/html;charset=UTF-8
+23:59:54  [DEBUG] : http-outgoing-1 << Content-Length: 35
+23:59:54  [DEBUG] : http-outgoing-1 << Date: Sun, 28 Mar 2021 15:59:53 GMT
+23:59:54  [DEBUG] : Connection can be kept alive indefinitely
+23:59:54  [DEBUG] : Connection [id: 1][route: {}->http://testingedu.com.cn:8081] can be kept alive indefinitely
+23:59:54  [DEBUG] : http-outgoing-1: set socket timeout to 0
+23:59:54  [DEBUG] : Connection released: [id: 1][route: {}->http://testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]

@@ -29,7 +29,8 @@ public class ShopCartTest {
         String cartResult = sy.doGet("http://www.testingedu.com.cn:8000/index.php?m=Home&c=Cart&a=header_cart_list");
         AutoLogger.log.info("返回结果是"+cartResult);
         //正则表达式找出结果
-        boolean b = InterKw.assertRegexEq("text\\('(.*?)'\\)", cartResult, "0");
+//        boolean b = InterKw.assertRegexEq("text\\('(.*?)'\\)", cartResult, "0");
+        boolean b = InterKw.assertRegexEq("text\\('(.*?)'\\)", "0");
         AutoLogger.log.info("断言的结果是"+b);
 
 
@@ -37,13 +38,13 @@ public class ShopCartTest {
         String loginResult = sy.doPost("http://www.testingedu.com.cn:8000/index.php?m=Home&c=User&a=do_login&t=0.8275829035046693", "username=1766342177%40qq.com&password=123456&verify_code=1", "urlencoded");
         AutoLogger.log.info("登录的结果是"+loginResult);
 
-        boolean loginbl = InterKw.jsonValueCheck("$.msg", loginResult, "登录成功");
+        boolean loginbl = InterKw.jsonValueCheck("$.msg", "登录成功");
 
         //登录之后，再执行登录接口
         String after = sy.doGet("http://www.testingedu.com.cn:8000/index.php?m=Home&c=Cart&a=header_cart_list");
         AutoLogger.log.info("返回结果是"+after);
         //正则表达式找出结果
-        boolean bb = InterKw.assertRegexEq("text\\('(.*?)'\\)", after, "2");
+        boolean bb = InterKw.assertRegexEq("text\\('(.*?)'\\)", "2");
         AutoLogger.log.info("断言的结果是"+bb);
 
     }

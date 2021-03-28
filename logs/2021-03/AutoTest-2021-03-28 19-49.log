@@ -1,0 +1,4 @@
+19:49:51  [INFO ] : auth的返回结果是{"status":200,"msg":"success","token":"d4a5cd7caa2e40a58d964806fae947c6"}
+19:49:51  [INFO ] : tokenValue的值是d4a5cd7caa2e40a58d964806fae947c6
+19:49:51  [INFO ] : login接口返回结果是{"status":405,"msg":"非法请求"}
+19:49:51  [INFO ] : logout的返回结果是{"status":405,"msg":"非法请求"}
