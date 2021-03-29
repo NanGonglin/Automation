@@ -1,0 +1,5 @@
+20:06:12  [INFO ] : {"status":200,"msg":"success","token":"6abb89441c7649e99a4354c48942e652"}
+20:06:12  [INFO ] : {"status":200,"msg":"注册成功"}
+20:06:12  [INFO ] : {"status":200,"msg":"恭喜您，登录成功","userid":"24"}
+20:06:12  [INFO ] : {"status":200,"msg":"查询成功","nickname":"test register","id":"24","describe":"study yuan"}
+20:06:12  [INFO ] : {"status":200,"msg":"用户已退出登录"}
