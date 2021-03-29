@@ -266,7 +266,7 @@ public class ShopWebKeyWord {
      * @return
      * @throws SQLException
      */
-    public boolean assertMysqlData(String sql,String expect)  {
+    public static boolean assertMysqlData(String sql, String expect)  {
         //先通过数据库查询获取结果
         MysqlUtils mysql=new MysqlUtils();
         mysql.creatConnector();

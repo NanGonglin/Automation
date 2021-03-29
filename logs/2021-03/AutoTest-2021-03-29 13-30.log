@@ -1,0 +1,147 @@
+13:30:06  [DEBUG] : CookieSpec selected: default
+13:30:06  [DEBUG] : Auth cache not set in the context
+13:30:06  [DEBUG] : Connection request: [route: {}->http://192.168.217.133:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+13:30:06  [DEBUG] : Connection leased: [id: 0][route: {}->http://192.168.217.133:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+13:30:06  [DEBUG] : Opening connection {}->http://192.168.217.133:8080
+13:30:06  [DEBUG] : Connecting to /192.168.217.133:8080
+13:30:06  [DEBUG] : Connection established 192.168.217.1:62982<->192.168.217.133:8080
+13:30:06  [DEBUG] : Executing request POST /Inter/HTTP/auth HTTP/1.1
+13:30:06  [DEBUG] : Target auth state: UNCHALLENGED
+13:30:06  [DEBUG] : Proxy auth state: UNCHALLENGED
+13:30:06  [DEBUG] : http-outgoing-0 >> POST /Inter/HTTP/auth HTTP/1.1
+13:30:06  [DEBUG] : http-outgoing-0 >> Content-Length: 0
+13:30:06  [DEBUG] : http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded
+13:30:06  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+13:30:06  [DEBUG] : http-outgoing-0 >> Host: 192.168.217.133:8080
+13:30:06  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+13:30:06  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+13:30:06  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+13:30:06  [DEBUG] : http-outgoing-0 >> "POST /Inter/HTTP/auth HTTP/1.1[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "Content-Length: 0[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "Host: 192.168.217.133:8080[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "Content-Length: 73[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "Date: Mon, 29 Mar 2021 05:30:05 GMT[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "Keep-Alive: timeout=20[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-0 << "{"status":200,"msg":"success","token":"b54e4494d28e43c887e2218620b512f1"}"
+13:30:06  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 
+13:30:06  [DEBUG] : http-outgoing-0 << Content-Type: text/html;charset=UTF-8
+13:30:06  [DEBUG] : http-outgoing-0 << Content-Length: 73
+13:30:06  [DEBUG] : http-outgoing-0 << Date: Mon, 29 Mar 2021 05:30:05 GMT
+13:30:06  [DEBUG] : http-outgoing-0 << Keep-Alive: timeout=20
+13:30:06  [DEBUG] : http-outgoing-0 << Connection: keep-alive
+13:30:06  [DEBUG] : Connection can be kept alive for 20000 MILLISECONDS
+13:30:06  [DEBUG] : Connection [id: 0][route: {}->http://192.168.217.133:8080] can be kept alive for 20.0 seconds
+13:30:06  [DEBUG] : http-outgoing-0: set socket timeout to 0
+13:30:06  [DEBUG] : Connection released: [id: 0][route: {}->http://192.168.217.133:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+13:30:06  [INFO ] : {"status":200,"msg":"success","token":"b54e4494d28e43c887e2218620b512f1"}
+13:30:06  [DEBUG] : CookieSpec selected: default
+13:30:06  [DEBUG] : Auth cache not set in the context
+13:30:06  [DEBUG] : Connection request: [route: {}->http://192.168.217.133:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+13:30:06  [DEBUG] : Connection leased: [id: 1][route: {}->http://192.168.217.133:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+13:30:06  [DEBUG] : Opening connection {}->http://192.168.217.133:8080
+13:30:06  [DEBUG] : Connecting to /192.168.217.133:8080
+13:30:06  [DEBUG] : Connection established 192.168.217.1:62983<->192.168.217.133:8080
+13:30:06  [DEBUG] : Executing request POST /Inter/HTTP/login HTTP/1.1
+13:30:06  [DEBUG] : Target auth state: UNCHALLENGED
+13:30:06  [DEBUG] : Proxy auth state: UNCHALLENGED
+13:30:06  [DEBUG] : http-outgoing-1 >> POST /Inter/HTTP/login HTTP/1.1
+13:30:06  [DEBUG] : http-outgoing-1 >> yuan: testToken
+13:30:06  [DEBUG] : http-outgoing-1 >> token: b54e4494d28e43c887e2218620b512f1
+13:30:06  [DEBUG] : http-outgoing-1 >> Content-Length: 29
+13:30:06  [DEBUG] : http-outgoing-1 >> Content-Type: application/x-www-form-urlencoded
+13:30:06  [DEBUG] : http-outgoing-1 >> Content-Encoding: UTF-8
+13:30:06  [DEBUG] : http-outgoing-1 >> Host: 192.168.217.133:8080
+13:30:06  [DEBUG] : http-outgoing-1 >> Connection: Keep-Alive
+13:30:06  [DEBUG] : http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+13:30:06  [DEBUG] : http-outgoing-1 >> Accept-Encoding: gzip,deflate
+13:30:06  [DEBUG] : http-outgoing-1 >> "POST /Inter/HTTP/login HTTP/1.1[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "yuan: testToken[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "token: b54e4494d28e43c887e2218620b512f1[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "Content-Length: 29[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "Content-Encoding: UTF-8[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "Host: 192.168.217.133:8080[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 >> "username=yuan&password=123456"
+13:30:06  [DEBUG] : http-outgoing-1 << "HTTP/1.1 200 [\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 << "Content-Length: 35[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 << "Date: Mon, 29 Mar 2021 05:30:05 GMT[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 << "Keep-Alive: timeout=20[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-1 << "{"status":402,"msg":"[0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xe9][0x94][0x99][0xe8][0xaf][0xaf]"}"
+13:30:06  [DEBUG] : http-outgoing-1 << HTTP/1.1 200 
+13:30:06  [DEBUG] : http-outgoing-1 << Content-Type: text/html;charset=UTF-8
+13:30:06  [DEBUG] : http-outgoing-1 << Content-Length: 35
+13:30:06  [DEBUG] : http-outgoing-1 << Date: Mon, 29 Mar 2021 05:30:05 GMT
+13:30:06  [DEBUG] : http-outgoing-1 << Keep-Alive: timeout=20
+13:30:06  [DEBUG] : http-outgoing-1 << Connection: keep-alive
+13:30:06  [DEBUG] : Connection can be kept alive for 20000 MILLISECONDS
+13:30:06  [DEBUG] : Connection [id: 1][route: {}->http://192.168.217.133:8080] can be kept alive for 20.0 seconds
+13:30:06  [DEBUG] : http-outgoing-1: set socket timeout to 0
+13:30:06  [DEBUG] : Connection released: [id: 1][route: {}->http://192.168.217.133:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+13:30:06  [INFO ] : {"status":402,"msg":"参数错误"}
+13:30:06  [DEBUG] : CookieSpec selected: default
+13:30:06  [DEBUG] : Auth cache not set in the context
+13:30:06  [DEBUG] : Connection request: [route: {}->http://192.168.217.133:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+13:30:06  [DEBUG] : Connection leased: [id: 2][route: {}->http://192.168.217.133:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+13:30:06  [DEBUG] : Opening connection {}->http://192.168.217.133:8080
+13:30:06  [DEBUG] : Connecting to /192.168.217.133:8080
+13:30:06  [DEBUG] : Connection established 192.168.217.1:62984<->192.168.217.133:8080
+13:30:06  [DEBUG] : Executing request POST /Inter/HTTP/logout HTTP/1.1
+13:30:06  [DEBUG] : Target auth state: UNCHALLENGED
+13:30:06  [DEBUG] : Proxy auth state: UNCHALLENGED
+13:30:06  [DEBUG] : http-outgoing-2 >> POST /Inter/HTTP/logout HTTP/1.1
+13:30:06  [DEBUG] : http-outgoing-2 >> yuan: testToken
+13:30:06  [DEBUG] : http-outgoing-2 >> token: b54e4494d28e43c887e2218620b512f1
+13:30:06  [DEBUG] : http-outgoing-2 >> Content-Length: 0
+13:30:06  [DEBUG] : http-outgoing-2 >> Content-Type: application/x-www-form-urlencoded
+13:30:06  [DEBUG] : http-outgoing-2 >> Content-Encoding: UTF-8
+13:30:06  [DEBUG] : http-outgoing-2 >> Host: 192.168.217.133:8080
+13:30:06  [DEBUG] : http-outgoing-2 >> Connection: Keep-Alive
+13:30:06  [DEBUG] : http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+13:30:06  [DEBUG] : http-outgoing-2 >> Accept-Encoding: gzip,deflate
+13:30:06  [DEBUG] : http-outgoing-2 >> "POST /Inter/HTTP/logout HTTP/1.1[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "yuan: testToken[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "token: b54e4494d28e43c887e2218620b512f1[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "Content-Length: 0[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "Content-Encoding: UTF-8[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "Host: 192.168.217.133:8080[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 >> "[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "HTTP/1.1 200 [\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "Content-Length: 44[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "Date: Mon, 29 Mar 2021 05:30:05 GMT[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "Keep-Alive: timeout=20[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "Connection: keep-alive[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "[\r][\n]"
+13:30:06  [DEBUG] : http-outgoing-2 << "{"status":200,"msg":"[0xe7][0x94][0xa8][0xe6][0x88][0xb7][0xe5][0xb7][0xb2][0xe9][0x80][0x80][0xe5][0x87][0xba][0xe7][0x99][0xbb][0xe5][0xbd][0x95]"}"
+13:30:06  [DEBUG] : http-outgoing-2 << HTTP/1.1 200 
+13:30:06  [DEBUG] : http-outgoing-2 << Content-Type: text/html;charset=UTF-8
+13:30:06  [DEBUG] : http-outgoing-2 << Content-Length: 44
+13:30:06  [DEBUG] : http-outgoing-2 << Date: Mon, 29 Mar 2021 05:30:05 GMT
+13:30:06  [DEBUG] : http-outgoing-2 << Keep-Alive: timeout=20
+13:30:06  [DEBUG] : http-outgoing-2 << Connection: keep-alive
+13:30:06  [DEBUG] : Connection can be kept alive for 20000 MILLISECONDS
+13:30:06  [DEBUG] : Connection [id: 2][route: {}->http://192.168.217.133:8080] can be kept alive for 20.0 seconds
+13:30:06  [DEBUG] : http-outgoing-2: set socket timeout to 0
+13:30:06  [DEBUG] : Connection released: [id: 2][route: {}->http://192.168.217.133:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+13:30:06  [INFO ] : {"status":200,"msg":"用户已退出登录"}

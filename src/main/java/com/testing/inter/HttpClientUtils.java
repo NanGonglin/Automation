@@ -335,6 +335,44 @@ public class HttpClientUtils {
             return e.fillInStackTrace().toString();
         }
     }
+    //执行soap形式发送
+    public String doPostSoap(String uri,String param)  {
+        createclient();
+        HttpPost post = new HttpPost(uri);
+        //是否需要添加头域
+        if(isUseHeader){
+            //遍历map。将所有头域都添加进去
+            for (String headerkey : headerMap.keySet()) {
+                //添加头域方法
+                post.addHeader(headerkey, headerMap.get(headerkey));
+            }
+        }
+        try {
+            HttpEntity postparam = null;
+
+            StringEntity urlen = new StringEntity(param);
+            urlen.setContentEncoding("UTF-8");
+            urlen.setContentType("text/xml");
+            //向上转型
+            postparam = urlen;
+
+            post.setEntity(postparam);
+            CloseableHttpResponse response = client.execute(post);
+            String result = EntityUtils.toString(response.getEntity(), "UTF-8");
+            result = UnicodeDecode.unicodeDecode(result);
+            //使用正则表达式，获取token信息
+            Pattern resultPattern=Pattern.compile("<return>(.*?)</return>");
+            Matcher matcher=resultPattern.matcher(result);
+            if(matcher.find()){
+                result=matcher.group(1);
+            }
+            return result;
+        } catch (IOException e) {
+            //报错信息作为返回结果
+            AutoLogger.log.error(e,e.fillInStackTrace());
+            return e.fillInStackTrace().toString();
+        }
+    }
 
     //usecookie方法，将isusecookie字段置为true,从而在创建client的时候知道如何创建
     public void usecookie(){
