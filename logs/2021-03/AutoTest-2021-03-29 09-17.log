@@ -1,0 +1,42 @@
+09:17:19  [DEBUG] : CookieSpec selected: default
+09:17:19  [DEBUG] : Auth cache not set in the context
+09:17:19  [DEBUG] : Connection request: [route: {}->http://testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+09:17:19  [DEBUG] : Connection leased: [id: 0][route: {}->http://testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+09:17:19  [DEBUG] : Opening connection {}->http://testingedu.com.cn:8081
+09:17:19  [DEBUG] : Connecting to testingedu.com.cn/47.105.110.138:8081
+09:17:19  [DEBUG] : Connection established 192.168.0.105:56259<->47.105.110.138:8081
+09:17:19  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+09:17:19  [DEBUG] : Target auth state: UNCHALLENGED
+09:17:19  [DEBUG] : Proxy auth state: UNCHALLENGED
+09:17:19  [DEBUG] : http-outgoing-0 >> POST /inter/HTTP/auth HTTP/1.1
+09:17:19  [DEBUG] : http-outgoing-0 >> Content-Length: 0
+09:17:19  [DEBUG] : http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded
+09:17:19  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+09:17:19  [DEBUG] : http-outgoing-0 >> Host: testingedu.com.cn:8081
+09:17:19  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+09:17:19  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+09:17:19  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+09:17:19  [DEBUG] : http-outgoing-0 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "Content-Length: 0[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "Host: testingedu.com.cn:8081[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 << "Content-Length: 73[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 << "Date: Mon, 29 Mar 2021 01:17:19 GMT[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+09:17:19  [DEBUG] : http-outgoing-0 << "{"status":200,"msg":"success","token":"dae61fcfae35469093ab7b3c8e308e1b"}"
+09:17:19  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 
+09:17:19  [DEBUG] : http-outgoing-0 << Content-Type: text/html;charset=UTF-8
+09:17:19  [DEBUG] : http-outgoing-0 << Content-Length: 73
+09:17:19  [DEBUG] : http-outgoing-0 << Date: Mon, 29 Mar 2021 01:17:19 GMT
+09:17:19  [DEBUG] : Connection can be kept alive indefinitely
+09:17:19  [DEBUG] : Connection [id: 0][route: {}->http://testingedu.com.cn:8081] can be kept alive indefinitely
+09:17:19  [DEBUG] : http-outgoing-0: set socket timeout to 0
+09:17:19  [DEBUG] : Connection released: [id: 0][route: {}->http://testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+09:17:19  [INFO ] : {"status":200,"msg":"success","token":"dae61fcfae35469093ab7b3c8e308e1b"}

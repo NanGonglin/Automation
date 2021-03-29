@@ -14,7 +14,7 @@ public class InterTest {
         InterKw sy=new InterKw();
 
         sy.doposturl("http://testingedu.com.cn:8081/inter/HTTP/auth","");
-        sy.saveParam("token","$.token");
+        sy.saveParam("tokenV","$.token");
         sy.addHeader("{\"yuan\":\"testToken\",\"token\":\"{tokenV}\"}");
         sy.doposturl("http://testingedu.com.cn:8081/inter/HTTP/login", "username=yuan&password=123456");
         sy.doposturl("http://testingedu.com.cn:8081/inter/HTTP//logout", "");

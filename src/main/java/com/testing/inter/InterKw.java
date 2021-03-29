@@ -35,6 +35,7 @@ public class InterKw {
     public void addHeader(String headerJson){
         //先替换变量参数
         headerJson=useParam(headerJson);
+
         httpClientUtils.addHeader(headerJson);
     }
 
@@ -44,9 +45,8 @@ public class InterKw {
         for (String key : paramMap.keySet()) {
             //替换的键的格式是{key}，replaceall用的是正则，所以要转义
             //每一轮循环，都会替换这一轮的key键值对，替换完之后，把原字符串修改完再进行下一次的循环
-            origin = origin.replaceAll("\\{" + key + "\\}", paramMap.get(key));
+            origin = origin.replaceAll("\\{"+key+"\\}", paramMap.get(key));
         }
-
         return origin;
     }
 
