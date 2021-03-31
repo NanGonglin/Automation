@@ -22,7 +22,7 @@ public class paramTest {
         HttpClientUtils sy=new HttpClientUtils();
 
         //auth接口
-        String authResult = sy.doPostUrlEncoded("http://testingedu.com.cn:8081/inter/HTTP/auth", "");
+        String authResult = sy.doPostUrl("http://testingedu.com.cn:8081/inter/HTTP/auth", "");
         AutoLogger.log.info("auth的返回结果是"+authResult);
         saveParam("tokenV", authResult, "$.token");
 
@@ -32,11 +32,11 @@ public class paramTest {
         sy.addHeader(finish);
 
         //login接口
-        String loginResult = sy.doPostUrlEncoded("http://testingedu.com.cn:8081/inter/HTTP/login", "username=yuan&password=123456");
+        String loginResult = sy.doPostUrl("http://testingedu.com.cn:8081/inter/HTTP/login", "username=yuan&password=123456");
         AutoLogger.log.info("login接口返回结果是"+loginResult);
 
         //logout请求
-        String logoutResult = sy.doPostUrlEncoded("http://testingedu.com.cn:8081/inter/HTTP//logout", "");
+        String logoutResult = sy.doPostUrl("http://testingedu.com.cn:8081/inter/HTTP//logout", "");
         AutoLogger.log.info("logout的返回结果是"+logoutResult);
     }
 

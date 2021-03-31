@@ -1,6 +1,5 @@
 package com.testing.class14;
 
-import com.testing.common.AutoLogger;
 import com.testing.inter.InterKw;
 
 /**
@@ -13,10 +12,19 @@ public class InterTest {
     public static void main(String[] args) {
         InterKw sy=new InterKw();
 
-        sy.doposturl("http://testingedu.com.cn:8081/inter/HTTP/auth","");
-        sy.saveParam("tokenV","$.token");
-        sy.addHeader("{\"yuan\":\"testToken\",\"token\":\"{tokenV}\"}");
-        sy.doposturl("http://testingedu.com.cn:8081/inter/HTTP/login", "username=yuan&password=123456");
-        sy.doposturl("http://testingedu.com.cn:8081/inter/HTTP//logout", "");
+//        sy.doPostUrl("http://testingedu.com.cn:8081/inter/HTTP/auth","");
+//        sy.saveParam("tokenV","$.token");
+//        sy.addHeader("{\"yuan\":\"testToken\",\"token\":\"{tokenV}\"}");
+//        sy.doPostUrl("http://testingedu.com.cn:8081/inter/HTTP/login", "username=yuan&password=123456");
+//        sy.doPostUrl("http://testingedu.com.cn:8081/inter/HTTP//logout", "");
+        sy.clearHeader();
+        sy.doPostUrl("http://www.testingedu.com.cn:8081/inter/HTTP/auth", "");
+        sy.saveParam("token", "$.token");
+        sy.addHeader("{\"token\":\"{token}\"}");
+        sy.doPostUrl("http://www.testingedu.com.cn:8081/inter/HTTP/login", "password=123456");
+
+
+
+
     }
 }

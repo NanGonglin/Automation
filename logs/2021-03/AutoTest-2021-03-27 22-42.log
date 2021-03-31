@@ -1,5 +1,0 @@
-22:42:19  [INFO ] : auth接口的返回是{"status":200,"msg":"success","token":"88376c85acfb4f07acae898925d5fe5d"}
-22:42:19  [INFO ] : token的值是88376c85acfb4f07acae898925d5fe5d
-22:42:19  [INFO ] : login接口的返回是{"status":200,"msg":"恭喜您，登录成功","userid":"1"}
-22:42:19  [INFO ] : userid的值是1
-22:42:19  [INFO ] : getUserInfo接口返回的值是{"status":200,"msg":"查询成功","nickname":"测试1","id":"1","describe":"测试"}

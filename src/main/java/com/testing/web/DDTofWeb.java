@@ -4,12 +4,8 @@ import com.google.common.io.Files;
 import com.testing.common.AutoLogger;
 import com.testing.common.ExcelWriter;
 import com.testing.shop.ShopWebKeyWord;
-import com.testing.web.MysqlUtils;
-import com.testing.web.RobotUtils;
 import com.testing.webDriver.GoogleDriver;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -32,24 +28,49 @@ import java.util.concurrent.TimeUnit;
 public class DDTofWeb {
     public WebDriver driver=null;
 
-    public ExcelWriter resultcase=null;
+    public ExcelWriter result =null;
 
+    public final static String PASS="Pass";
+    public final static String FAIL="Fail";
     public final int RESULTCOL=10;
 
-    //写入操作的时候，需要告诉writer写入的行号
-    public int nowline=0;
 
-    public void setNowline(int rowNo){
-        nowline=rowNo;
+
+    //写入操作的时候，需要告诉writer写入的行号
+    public int line =0;
+
+    public void setLine(int rowNo){
+        line =rowNo;
     }
 
     //构造方法中，传递resultWriter的赋值操作，其他方法调用完成写入
     public DDTofWeb(ExcelWriter resultWriter){
-        resultcase=resultWriter;
+        result =resultWriter;
+    }
+
+    //成功时的写入操作
+    public void setPass(){
+        result.writeCell(line,RESULTCOL,PASS);
+    }
+    //失败时的写入操作
+    public void setFail(Exception e){
+        //失败的时候，在日志中记录异常信息
+        AutoLogger.log.error(e,e.fillInStackTrace());
+        result.writeFailCell(line,RESULTCOL,FAIL);
+    }
+    //无异常报错的执行失败
+    public void setFail(){
+        result.writeFailCell(line, RESULTCOL, FAIL);
     }
 
     public void setDriver(ShopWebKeyWord web){
-        driver=web.getDriver();
+        try {
+            driver=web.getDriver();
+            setPass();
+        } catch (Exception e) {
+            setFail(e);
+        }
+
     }
     /**
      * 打开谷歌浏览器
@@ -60,13 +81,12 @@ public class DDTofWeb {
             driver=gg.getdriver();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             AutoLogger.log.trace("*******浏览器启动了********");
-            resultcase.writeCell(nowline, RESULTCOL, "PASS");
             AutoLogger.log.info("正在启动浏览器");
+            setPass();
         } catch (Exception e) {
             e.printStackTrace();
             AutoLogger.log.error("执行打开浏览器失败");
-            AutoLogger.log.error(e,e.fillInStackTrace());
-            resultcase.writeCell(nowline, RESULTCOL, "FAIL");
+            setFail(e);
         }
     }
 
@@ -77,9 +97,10 @@ public class DDTofWeb {
     public boolean visitURL(String url){
         try {
             driver.get(url);
+            setPass();
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            setFail(e);
             return false;
         }
     }
@@ -90,6 +111,7 @@ public class DDTofWeb {
      */
     public void imWait(int seconds){
         driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+        setPass();
     }
 
     /**
@@ -100,9 +122,10 @@ public class DDTofWeb {
         try {
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             driver.findElement(By.xpath(xpath)).click();
+            setPass();
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            setFail(e);
             takeScreen("click");
             return false;
         }
@@ -116,8 +139,9 @@ public class DDTofWeb {
         try {
             Actions actions=new Actions(driver);
             actions.moveToElement(driver.findElement(By.xpath(xpath))).perform();
+            setPass();
         } catch (Exception e) {
-            e.printStackTrace();
+            setFail(e);
         }
     }
 
@@ -151,8 +175,9 @@ public class DDTofWeb {
         try {
             JavascriptExecutor runner=(JavascriptExecutor)driver;
             runner.executeScript(jsScript);
+            setPass();
         } catch (Exception e) {
-            e.printStackTrace();
+           setFail(e);
         }
     }
 
@@ -162,9 +187,14 @@ public class DDTofWeb {
      * @param xpath
      */
     public void runJsWithElement(String method,String xpath){
-        WebElement element = driver.findElement(By.xpath(xpath));
-        JavascriptExecutor runner=(JavascriptExecutor)driver;
-        runner.executeScript("arguments[0]."+method,element);
+        try {
+            WebElement element = driver.findElement(By.xpath(xpath));
+            JavascriptExecutor runner=(JavascriptExecutor)driver;
+            runner.executeScript("arguments[0]."+method,element);
+            setPass();
+        } catch (Exception e) {
+            setFail(e);
+        }
     }
 
     /**
@@ -176,9 +206,9 @@ public class DDTofWeb {
     public void halt(String seconds) {
         try {
             Thread.sleep(Integer.parseInt(seconds) * 1000);
+            setPass();
         } catch (InterruptedException e) {
-            e.printStackTrace();
-            System.out.println("等待失败");
+            setFail(e);
         }
     }
 
@@ -192,9 +222,10 @@ public class DDTofWeb {
             WebElement input = driver.findElement(By.xpath(xpath));
             input.clear();
             input.sendKeys(content);
+            setPass();
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            setFail(e);
             System.out.println("向"+xpath+"中输入内容的时候，失败。");
             return false;
         }
@@ -202,8 +233,13 @@ public class DDTofWeb {
     }
     //清空之前的值
     public void clear(String xpath){
-        WebElement input=driver.findElement(By.xpath(xpath));
-        input.clear();
+        try {
+            WebElement input=driver.findElement(By.xpath(xpath));
+            input.clear();
+            setPass();
+        } catch (Exception e) {
+            setFail(e);
+        }
     }
 
     /**
@@ -219,15 +255,20 @@ public class DDTofWeb {
      * @param windowTitle 要切换的窗口的标题
      */
     public void switchWindows(String windowTitle){
-        Set<String> newHandles=driver.getWindowHandles();
-        for(String handle:newHandles){
-            //先切换到当前窗口
-            driver.switchTo().window(handle);
-            //获取当前窗口的标题
-            String title = driver.getTitle();
-            if(windowTitle.equals(title)){
-                break;
+        try {
+            Set<String> newHandles=driver.getWindowHandles();
+            for(String handle:newHandles){
+                //先切换到当前窗口
+                driver.switchTo().window(handle);
+                //获取当前窗口的标题
+                String title = driver.getTitle();
+                if(windowTitle.equals(title)){
+                    break;
+                }
             }
+            setPass();
+        } catch (Exception e) {
+            setFail(e);
         }
     }
 
@@ -253,39 +294,42 @@ public class DDTofWeb {
      * @param method 包含还是等于预期结果
      */
     public boolean assertText(String xpath,String content,String method){
-        String text = "";
-        boolean result=false;
         try {
-            text = driver.findElement(By.xpath(xpath)).getText();
+            String text = "";
+            boolean result=false;
+            try {
+                text = driver.findElement(By.xpath(xpath)).getText();
+            } catch (Exception e) {
+                setFail(e);
+                return false;
+            }
+            switch (method){
+                case "contains":
+                    if(text.contains(content)){
+                        result=true;
+                    }
+                    else{
+                        result=true;
+                    }
+                    break;
+                case "equals":
+                    if(text.equals(content)){
+                        System.out.println(content);
+                        System.out.println(text);
+                        System.out.println("查询结果正确");
+                        result=true;
+                    }
+                    else{
+                        System.out.println("查询结果不正确");
+                    }
+                    break;
+            }
+            setPass();
+            return result;
         } catch (Exception e) {
-            e.printStackTrace();
+            setFail(e);
             return false;
         }
-        switch (method){
-            case "contains":
-                if(text.contains(content)){
-                    System.out.println(content);
-                    System.out.println(text);
-                    System.out.println("查询结果正确");
-                    result=true;
-                }
-                else{
-                    System.out.println("查询结果不正确");
-                }
-                break;
-            case "equals":
-                if(text.equals(content)){
-                    System.out.println(content);
-                    System.out.println(text);
-                    System.out.println("查询结果正确");
-                    result=true;
-                }
-                else{
-                    System.out.println("查询结果不正确");
-                }
-                break;
-        }
-        return result;
     }
 
     /**
@@ -311,8 +355,7 @@ public class DDTofWeb {
                 return  false;
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("查询获取数据失败");
+            setFail(e);
             return  false;
         }
     }
@@ -333,9 +376,10 @@ public class DDTofWeb {
     public boolean switchIframe(String xpath){
         try {
             driver.switchTo().frame(driver.findElement(By.xpath(xpath)));
+            setPass();
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            setFail(e);
             return false;
         }
     }
@@ -346,15 +390,20 @@ public class DDTofWeb {
      * @param content 选择的值
      */
     public void select(String xpath,String via,String content){
-        WebElement element = driver.findElement(By.xpath(xpath));
-        Select userSelected=new Select(element);
-        switch (via){
-            case "value":
-                userSelected.selectByValue(content);
-                break;
-            case "content":
-                userSelected.selectByVisibleText(content);
-                break;
+        try {
+            WebElement element = driver.findElement(By.xpath(xpath));
+            Select userSelected=new Select(element);
+            switch (via){
+                case "value":
+                    userSelected.selectByValue(content);
+                    break;
+                case "content":
+                    userSelected.selectByVisibleText(content);
+                    break;
+            }
+            setPass();
+        } catch (Exception e) {
+            setFail(e);
         }
     }
     /**
@@ -420,6 +469,7 @@ public class DDTofWeb {
      */
     public void closeBrowser(){
         driver.quit();
+        setPass();
     }
 
 }

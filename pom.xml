@@ -108,6 +108,13 @@
             <artifactId>java-client</artifactId>
             <version>7.3.0</version>
         </dependency>
+        <!--增加邮件发送的库-->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
     </dependencies>
 
 </project>

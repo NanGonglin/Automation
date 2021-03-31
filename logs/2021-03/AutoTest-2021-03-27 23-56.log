@@ -1,8 +1,0 @@
-23:56:26  [INFO ] : 随机的用户名是yuan36
-23:56:26  [INFO ] : auth接口的返回是{"status":200,"msg":"success","token":"a8b5ffc7261d45edaea99b9e8d6000af"}
-23:56:26  [INFO ] : token的值是a8b5ffc7261d45edaea99b9e8d6000af
-23:56:27  [INFO ] : register接口的返回是{"status":200,"msg":"注册成功"}
-23:56:27  [INFO ] : login接口的返回是{"status":200,"msg":"恭喜您，登录成功","userid":"13401"}
-23:56:27  [INFO ] : userid的值是13401
-23:56:27  [INFO ] : getUserInfo接口返回的值是{"status":200,"msg":"查询成功","nickname":"yuan36在学习测试开发","id":"13401","describe":"我还在学习测试开发"}
-23:56:27  [INFO ] : logout接口的返回是{"status":200,"msg":"用户已退出登录"}

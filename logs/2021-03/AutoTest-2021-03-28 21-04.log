@@ -1,4 +1,0 @@
-21:04:01  [INFO ] : auth的返回结果是{"status":200,"msg":"success","token":"eef7d2a9eb5b401b9e846add5922f17f"}
-21:04:01  [INFO ] : 替换之后的结果是{"yuan":"testToken","token":"eef7d2a9eb5b401b9e846add5922f17f"}
-21:04:01  [INFO ] : login接口返回结果是{"status":200,"msg":"恭喜您，登录成功","userid":"8340"}
-21:04:01  [INFO ] : logout的返回结果是{"status":200,"msg":"用户已退出登录"}

@@ -53,11 +53,11 @@ public class InterKw {
     }
 
     //dopost请求，得到返回结果
-    public void doposturl(String url, String param) {
+    public void doPostUrl(String url, String param) {
         //可能含有变量，先替换
         url = useParam(url);
         param = useParam(param);
-        responseResult = httpClientUtils.doPostUrlEncoded(url, param);
+        responseResult = httpClientUtils.doPostUrl(url, param);
         AutoLogger.log.info(responseResult);
     }
     //soap接口,执行返回
@@ -121,7 +121,7 @@ public class InterKw {
     }
 
     /**
-     * 通过jsonpath断言json解析结果是否符合预期
+     * 通过jsonpath断言json解析结果是否等于预期
      * @param jsonpath jsonpath表达式
      * @param expect    预期结果
      * @return
@@ -129,9 +129,30 @@ public class InterKw {
     public static boolean jsonValueCheck(String jsonpath,String expect){
         String jsonValue = JSONPath.read(responseResult, jsonpath).toString();
         if(expect.equals(jsonValue)){
-            AutoLogger.log.info("pass");
+            AutoLogger.log.info("解析结果是"+jsonValue);
             return true;
         }
         return false;
+    }
+    /**
+     * 通过jsonpath断言json解析结果是否被包含在预期中
+     * @param jsonpath jsonpath表达式
+     * @param expect    预期结果
+     * @return
+     */
+    public static boolean assertJsonContains(String jsonpath,String expect){
+        String jsonValue = JSONPath.read(responseResult, jsonpath).toString();
+        if(expect.contains(jsonValue)){
+            AutoLogger.log.info("解析结果是"+jsonValue);
+            return true;
+        }
+        return false;
+    }
+    /**
+     * 清空headerMap的值
+     */
+    public void clearHeader(){
+        //重新实例化，将headerMap清空
+        httpClientUtils.clearHeader();
     }
 }

@@ -1,9 +1,0 @@
-22:37:08  [INFO ] : auth接口的返回是{"status":200,"msg":"success","token":"f730a6739c9e49bd8d3fab8851fa0f55"}
-22:37:08  [INFO ] : token的值是f730a6739c9e49bd8d3fab8851fa0f55
-22:37:08  [INFO ] : login接口的返回是{"status":406,"msg":"用户已经在别处登录"}
-22:37:41  [INFO ] : auth接口的返回是{"status":200,"msg":"success","token":"6067d5e4efc1496bb375b4b55b92642c"}
-22:37:41  [INFO ] : token的值是6067d5e4efc1496bb375b4b55b92642c
-22:37:41  [INFO ] : login接口的返回是{"status":200,"msg":"恭喜您，登录成功","userid":"1"}
-22:37:41  [INFO ] : userid的值是1
-22:37:41  [INFO ] : [Content-Type: application/x-www-form-urlencoded,Content-Encoding: UTF-8,Content-Length: 4,Chunked: false]
-22:37:41  [INFO ] : getUserInfo接口返回的值是{"status":401,"msg":"您还未登录"}

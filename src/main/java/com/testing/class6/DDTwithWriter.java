@@ -30,7 +30,7 @@ public class DDTwithWriter {
                 //每一行读取对应得内容
                 List<String> rowContent=casefile.readLine(rowNo);
                 //设置当前的行号，指定关键字写入的地方
-                web.setNowline(rowNo);
+                web.setLine(rowNo);
 
                 //基于每行内容，执行测试用例
                 switch (rowContent.get(KEYCOL)){

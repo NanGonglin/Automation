@@ -1,5 +1,4 @@
-20:54:21  [INFO ] : {"status":200,"msg":"success","token":"46380b781b5d42538db13db0b098146f"}
-20:54:21  [INFO ] : {"status":200,"msg":"注册成功"}
-20:54:21  [INFO ] : {"status":200,"msg":"恭喜您，登录成功","userid":"25"}
-20:54:21  [INFO ] : {"status":200,"msg":"查询成功","nickname":"test register","id":"25","describe":"study"}
-20:54:21  [INFO ] : {"status":200,"msg":"用户已退出登录"}
+15:46:32  [INFO ] : 当前的sheet页是:商城后台系统用例
+15:46:34  [INFO ] : 正在启动浏览器
+15:46:41  [INFO ] : 当前的sheet页是:商城前台系统用例
+15:46:42  [INFO ] : 正在启动浏览器

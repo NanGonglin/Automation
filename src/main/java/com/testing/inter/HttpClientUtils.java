@@ -126,7 +126,7 @@ public class HttpClientUtils {
             //unicode转码
             result= UnicodeDecode.unicodeDecode(result);
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             //报错信息作为返回结果
             AutoLogger.log.error(e,e.fillInStackTrace());
             return e.fillInStackTrace().toString();
@@ -151,7 +151,7 @@ public class HttpClientUtils {
             //unicode转码
             result= UnicodeDecode.unicodeDecode(result);
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             //报错信息作为返回结果
             AutoLogger.log.error(e,e.fillInStackTrace());
             return e.fillInStackTrace().toString();
@@ -214,7 +214,7 @@ public class HttpClientUtils {
             String result = EntityUtils.toString(response.getEntity(), "UTF-8");
             result=UnicodeDecode.unicodeDecode(result);
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             //报错信息作为返回结果
             AutoLogger.log.error(e,e.fillInStackTrace());
             return e.fillInStackTrace().toString();
@@ -223,7 +223,7 @@ public class HttpClientUtils {
 
 
     //执行www-form-encoding格式的发包
-    public String doPostUrlEncoded(String uri,String param)  {
+    public String doPostUrl(String uri,String param)  {
         createclient();
         HttpPost post = new HttpPost(uri);
         //是否需要添加头域
@@ -248,7 +248,7 @@ public class HttpClientUtils {
             String result = EntityUtils.toString(response.getEntity(), "UTF-8");
             result = UnicodeDecode.unicodeDecode(result);
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             //报错信息作为返回结果
             AutoLogger.log.error(e,e.fillInStackTrace());
             return e.fillInStackTrace().toString();
@@ -257,7 +257,7 @@ public class HttpClientUtils {
 
 
     //json格式发包
-    public String doPostJson(String uri,String param) throws IOException {
+    public String doPostJson(String uri,String param) throws Exception {
         createclient();
         HttpPost post = new HttpPost(uri);
         //是否需要添加头域
@@ -282,7 +282,7 @@ public class HttpClientUtils {
             String result = EntityUtils.toString(response.getEntity(), "UTF-8");
             result = UnicodeDecode.unicodeDecode(result);
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             //报错信息作为返回结果
             AutoLogger.log.error(e, e.fillInStackTrace());
             return e.fillInStackTrace().toString();
@@ -291,7 +291,7 @@ public class HttpClientUtils {
     }
 
     //文件上传multipart/form-data
-    public String doPostFile(String uri,String param) throws IOException {
+    public String doPostFile(String uri,String param) throws Exception {
         createclient();
         HttpPost post = new HttpPost(uri);
         //是否需要添加头域
@@ -329,7 +329,7 @@ public class HttpClientUtils {
             String result = EntityUtils.toString(response.getEntity(), "UTF-8");
             result = UnicodeDecode.unicodeDecode(result);
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             //报错信息作为返回结果
             AutoLogger.log.error(e,e.fillInStackTrace());
             return e.fillInStackTrace().toString();
@@ -367,7 +367,7 @@ public class HttpClientUtils {
                 result=matcher.group(1);
             }
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             //报错信息作为返回结果
             AutoLogger.log.error(e,e.fillInStackTrace());
             return e.fillInStackTrace().toString();

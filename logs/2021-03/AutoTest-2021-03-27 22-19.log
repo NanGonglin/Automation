@@ -1,3 +1,0 @@
-22:19:05  [INFO ] : {"status":200,"msg":"success","token":"1aa7e379a0ee43d49b51a5d5930ec771"}
-22:19:05  [INFO ] : token的值是1aa7e379a0ee43d49b51a5d5930ec771
-22:19:05  [INFO ] : login接口的结果是{"status":200,"msg":"恭喜您，登录成功","userid":"1"}

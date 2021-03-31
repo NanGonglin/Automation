@@ -384,7 +384,6 @@ public class ShopWebKeyWord {
         Date now=new Date();
         SimpleDateFormat sdk=new SimpleDateFormat(format);
         String result = sdk.format(now);
-//        System.out.println(format);
         return result;
     }
     /**
