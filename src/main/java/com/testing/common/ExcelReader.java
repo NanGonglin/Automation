@@ -46,9 +46,11 @@ public class ExcelReader {
             if (type.equals(".xlsx")) {
                 workbook = new XSSFWorkbook(in);
                 sheet =workbook.getSheetAt(0);
+                rows=sheet.getPhysicalNumberOfRows();
             } else if (type.equals(".xls")) {
                 workbook = new HSSFWorkbook(in);
                 sheet =workbook.getSheetAt(0);
+                rows=sheet.getPhysicalNumberOfRows();
             }
         } catch (Exception e) {
             // 读取失败则给出Excel读取失败的提示，并停止
