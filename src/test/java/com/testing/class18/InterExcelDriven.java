@@ -2,6 +2,7 @@ package com.testing.class18;
 
 import com.testing.common.ExcelReader;
 import com.testing.common.ExcelWriter;
+import com.testing.common.Report;
 import com.testing.inter.DDTOfInter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -64,44 +65,44 @@ public class InterExcelDriven {
 			String expectedResult) {
 		// TODO Auto-generated method stub
 		// 执行关键字相应操作
-//		try {
-			// 通过Excel表中填写的关键字判断调用哪个方法执行
-//			switch (keywords) {
-//			case "post":
-//				inter.post(param1, param2);
-//				break;
-//			case "get":
-//				inter.doGet(param1, param2);
-//				break;
-//			case "savecookie":
-//				inter.useCookie();
-//				break;
-//			case "clearcookie":
-//				inter.clearCookie();
-//				break;
-//			case "addHeader":
-//				inter.useHeader(param1);
-//				break;
-//			case "clearHeader":
-//				inter.clearHeader();
-//				break;
-//			case "saveParam":
-//				inter.saveParam(param1, param2);
-//				break;
-//			}
-//			// 通过excel表中填写的校验方法确定
-//			switch (assertMethod) {
-//			case "equal":
-//				inter.assertJsonSame(JsonPath, expectedResult);
-//				break;
-//			case "contain":
-//				inter.assertJsonContains(JsonPath, expectedResult);
-//				break;
-//			}
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+//			 通过Excel表中填写的关键字判断调用哪个方法执行
+			switch (keywords) {
+			case "post":
+				inter.doPostUrl(param1, param2);
+				break;
+			case "get":
+				inter.doGet(param1, param2);
+				break;
+			case "savecookie":
+				inter.useCookie();
+				break;
+			case "clearcookie":
+				inter.cleanCookie();
+				break;
+			case "addHeader":
+				inter.addHeader(param1);
+				break;
+			case "clearHeader":
+				inter.clearHeader();
+				break;
+			case "saveParam":
+				inter.saveParam(param1, param2);
+				break;
+			}
+			// 通过excel表中填写的校验方法确定
+			switch (assertMethod) {
+			case "equal":
+				inter.assertJsonSame(JsonPath, expectedResult);
+				break;
+			case "contain":
+				inter.assertJsonContains(JsonPath, expectedResult);
+				break;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	// aftersuite方法，完成脚本执行完成之后的环境清理工作。
@@ -109,8 +110,6 @@ public class InterExcelDriven {
 	public void afterSuite() {
 		caseExcel.close();
 		resultExcel.save();
-//		Report htmlReport = new Report();
-//		htmlReport.sendreport(rootpath + "\\cases\\result-" + createdate + "TestNGHTTPLogin.xlsx", createdate);
 	}
 
 }

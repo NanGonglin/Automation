@@ -3,6 +3,7 @@ package com.testing.inter;
 import com.alibaba.fastjson.JSONPath;
 import com.testing.common.AutoLogger;
 //import com.testing.common.Encrypt;
+import com.testing.common.Encrypt;
 import com.testing.common.ExcelWriter;
 
 import java.text.SimpleDateFormat;
@@ -138,18 +139,18 @@ public class DDTOfInter {
     }
 
     //进行加密，得到加密之后的密码字符串，存到paramMap中使用
-//    public void saveEncPwd(String paramKey,String originPwd){
-//        try {
-//            //创建加密对象
-//            Encrypt enc=new Encrypt();
-//            //对原始的密码进行加密，存储为param的值
-//            String paramValue = enc.enCrypt(useParam(originPwd));
-//            paramMap.put(paramKey,paramValue);
-//            setPass();
-//        } catch (Exception e) {
-//            setFail(e);
-//        }
-//    }
+    public void saveEncPwd(String paramKey,String originPwd){
+        try {
+            //创建加密对象
+            Encrypt enc=new Encrypt();
+            //对原始的密码进行加密，存储为param的值
+            String paramValue = enc.enCrypt(useParam(originPwd));
+            paramMap.put(paramKey,paramValue);
+            setPass();
+        } catch (Exception e) {
+            setFail(e);
+        }
+    }
     //生成随机的用户名，这里使用时间戳
     public void saveRandomParam(String paramKey,String originString){
         //基于时间内容，拼接一个时间戳
@@ -234,6 +235,18 @@ public class DDTOfInter {
             return false;
         }
     }
+    public  boolean assertJsonSame(String jsonpath,String expect){
+        String jsonValue = JSONPath.read(responseResult, jsonpath).toString();
+        if(expect.equals(jsonValue)){
+            AutoLogger.log.info("解析结果是"+jsonValue);
+            setPass();
+            return true;
+        }
+        else {
+            setFail();
+            return false;
+        }
+    }
     /**
      * 清空headerMap的值
      */
@@ -241,5 +254,24 @@ public class DDTOfInter {
         //重新实例化，将headerMap清空
         httpClientUtils.clearHeader();
         setPass();
+    }
+    public String doGet(String uri,String useCookie){
+        try {
+            String result = httpClientUtils.doGet(uri, useCookie);
+            setPass();
+            return result;
+        } catch (Exception e) {
+            setFail(e);
+            return e.fillInStackTrace().toString();
+        }
+    }
+    public void useCookie(){
+        httpClientUtils.useCookie();
+    }
+    public void cleanCookie(){
+        httpClientUtils.cleancookie();
+    }
+    public void useHeader(){
+        httpClientUtils.useHeader();
     }
 }

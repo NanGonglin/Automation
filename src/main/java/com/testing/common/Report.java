@@ -2,6 +2,7 @@ package com.testing.common;
 
 import java.util.List;
 import java.util.Map;
+import javax.mail.*;
 
 public class Report {
 

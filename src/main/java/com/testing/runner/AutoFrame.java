@@ -26,7 +26,7 @@ public class AutoFrame {
 
     public static void main(String[] args) {
 
-        String type="web";
+        String type="http";
 
         //获取当前运行所在的路径,也就是运行类或者jar所在的绝对路径，比如：F:\Auto
         String runPath=System.getProperty("user.dir");
@@ -62,7 +62,7 @@ public class AutoFrame {
         //执行测试
         execCase();
         //发送邮件
-        Report.sendreport(resultfilePath+".xlsx", starttime);
+//        Report.sendreport(resultfilePath+".xlsx", starttime);
     }
     public static void execCase(){
         //遍历sheet页

@@ -1,3 +1,4 @@
-target/*
-Cases/Result/*
-test-output/*
+target/
+Cases/
+test-output/
+logs/

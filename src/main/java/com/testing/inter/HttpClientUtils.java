@@ -2,6 +2,7 @@ package com.testing.inter;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPath;
 import com.testing.class11.UnicodeDecode;
 import com.testing.common.AutoLogger;
 import org.apache.http.HttpEntity;
@@ -15,6 +16,7 @@ import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.openqa.selenium.By;
 
 import java.io.File;
 import java.io.IOException;
@@ -375,14 +377,14 @@ public class HttpClientUtils {
     }
 
     //usecookie方法，将isusecookie字段置为true,从而在创建client的时候知道如何创建
-    public void usecookie(){
+    public void useCookie(){
         isUseCookie=true;
     }
     public void notusecookie(){
         isUseCookie=false;
     }
 
-    public void clearcookie(){
+    public void cleancookie(){
         isUseCookie=false;
         //通过重新实例化，完成清理之前的cookie操作
         cookieStore=new BasicCookieStore();
@@ -424,6 +426,5 @@ public class HttpClientUtils {
         headerMap=new HashMap<>();
         notUseHeader();
     }
-
 
 }
